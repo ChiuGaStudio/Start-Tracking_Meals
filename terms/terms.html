@@ -67,6 +67,31 @@
       color: var(--text-color);
     }
 
+    .fixed-tabs {
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      z-index: 999;
+    }
+
+    .fixed-tabs a {
+      background-color: var(--bg-color);
+      border: 1px solid var(--text-color);
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.85rem;
+      color: var(--text-color);
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .fixed-tabs a:hover {
+      background-color: var(--accent-color);
+    }
+
     @media (max-width: 600px) {
       header {
         flex-direction: column;
@@ -160,5 +185,11 @@
   <footer>
     © 2025 ChiuGa Studio. All rights reserved.
   </footer>
+
+  <div class="fixed-tabs">
+    <a href="../supports/support.html">支援</a>
+    <a href="terms.html">使用者條款</a>
+    <a href="../PrivacyPolicies/PrivacyPolicies.html">隱私政策</a>
+  </div>
 </body>
 </html>
