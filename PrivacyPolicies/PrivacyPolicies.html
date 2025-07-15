@@ -6,29 +6,47 @@
   <title>隱私權政策</title>
   <style>
     :root {
-      --background-color: #EEEEEE;
-      --text-primary: #2D2926;
-      --accent-color: #ff7a59;
+      --bg-color: #EEEEEE;
+      --text-color: #2D2926;
+      --accent-color: #B8B0A6;
     }
 
     body {
       margin: 0;
-      background-color: var(--background-color);
-      color: var(--text-primary);
+      background-color: var(--bg-color);
+      color: var(--text-color);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
     }
 
     header {
-      padding: 24px 10px;
-      text-align: center;
-      border-bottom: 2px solid black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background-color: var(--bg-color);
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      font-weight: 600;
+   
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--text-color);
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
     }
 
     .container {
@@ -89,13 +107,18 @@
   </style>
 </head>
 <body>
-
   <header>
-    <h1>隱私權政策</h1>
+    <div class="logo">記食開始</div>
+    <nav>
+      <a href="../index.html">首頁</a>
+      <a href="../supports/support.html">支援</a>
+      <a href="../terms/terms.html">使用者條款</a>
+      <a href="PrivacyPolicies.html">隱私政策</a>
+    </nav>
   </header>
 
   <div class="container">
-
+  <h1>隱私權政策</h1>
     <div class="section">
       <p><strong>生效日期：</strong>2025 年 7 月 15 日</p>
       <p>

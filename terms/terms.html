@@ -17,21 +17,20 @@
       color: var(--text-color);
     }
     header {
-      background-color: var(--accent-color);
-      padding: 2rem;
-      text-align: center;
+         display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background-color: var(--bg-color);
     }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
+     .logo {
+      font-size: 1.5rem;
       font-weight: bold;
+       color: var(--text-color);
     }
     nav {
       display: flex;
-      justify-content: center;
       gap: 1.5rem;
-      padding: 1rem;
-      background-color: var(--accent-color);
     }
     nav a {
       text-decoration: none;
@@ -39,7 +38,7 @@
       font-weight: bold;
     }
     nav a:hover {
-      text-decoration: underline;
+     color: var(--accent-color);
     }
     main {
       max-width: 800px;
@@ -71,13 +70,16 @@
 </head>
 <body>
   <header>
-    <h1>服務條款與使用者協議</h1>
+   <div class="logo">記食開始</div>
+    <nav>
+      <a href="../index.html">首頁</a>
+      <a href="../supports/support.html">支援</a>
+      <a href="terms.html">使用者條款</a>
+      <a href="../PrivacyPolicies/PrivacyPolicies.html">隱私政策</a>
+    </nav>
   </header>
-  <nav>
-    <a href="../index.html">首頁</a>
-    <a href="PrivacyPolicies.html">隱私政策</a>
-  </nav>
   <main>
+    <h1>服務條款與使用者協議</h1>
     <section>
       <p>歡迎使用「Start Tracking Meals」App。在使用本應用程式前，請詳閱以下條款。使用本 App 即表示您同意遵守這些條款。</p>
     </section>
