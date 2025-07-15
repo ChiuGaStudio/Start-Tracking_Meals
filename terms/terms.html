@@ -1,195 +1,151 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>服務條款與使用者協議</title>
-  <style>
-    :root {
-      --bg-color: #EEEEEE;
-      --text-color: #2D2926;
-      --accent-color: #B8B0A6;
-    }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-    }
-    header {
-         display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 2rem;
-      background-color: var(--bg-color);
-    }
-     .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-       color: var(--text-color);
-    }
-    nav {
-      display: flex;
-      gap: 1.5rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--text-color);
-      font-weight: bold;
-    }
-    nav a:hover {
-     color: var(--accent-color);
-    }
-    main {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      font-size: 1.3rem;
-      margin-top: 2rem;
-    }
-    p, li {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    footer {
-      background-color: var(--accent-color);
-      text-align: center;
-      padding: 1.2rem 1rem;
-      font-size: 0.9rem;
-      color: var(--text-color);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服務條款與使用者協議 - 記食開始</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles to match homepage theme */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #EEEEEE; /* 原本的背景色 */
+            color: #2D2926; /* 原本的文字顏色 */
+            line-height: 1.6;
+        }
+        /* 定義主題顏色變數，方便 Tailwind 使用 */
+        .text-accent { color: #B8B0A6; }
+        .hover\:text-accent:hover { color: #B8B0A6; }
+        .text-primary-dark { color: #2D2926; }
+        .bg-accent { background-color: #B8B0A6; }
+        .text-highlight { color: #ECD676; } /* 標題強調色 */
 
-    .fixed-tabs {
-      position: fixed;
-      right: 1rem;
-      bottom: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      z-index: 999;
-    }
-
-    .fixed-tabs a {
-      background-color: var(--bg-color);
-      border: 1px solid var(--text-color);
-      border-radius: 6px;
-      padding: 0.4rem 0.8rem;
-      font-size: 0.85rem;
-      color: var(--text-color);
-      text-decoration: none;
-      text-align: center;
-    }
-
-    .fixed-tabs a:hover {
-      background-color: var(--accent-color);
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav {
-        flex-direction: column;
-        gap: 1rem;
-        margin-top: 1rem;
-      }
-      h2 {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
+        /* 自定義樣式，確保列表項目縮排 */
+        ul.policy-list li {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* 增加縮排 */
+            margin-bottom: 0.75rem;
+        }
+        ol.policy-list li {
+            list-style-type: decimal;
+            margin-left: 1.5rem; /* 增加縮排 */
+            margin-bottom: 0.75rem;
+        }
+    </style>
 </head>
-<body>
-  <header>
-   <div class="logo">記食開始</div>
-    <nav>
-      <a href="../index.html">首頁</a>
-      <a href="../supports/support.html">支援</a>
-      <a href="terms.html">使用者條款</a>
-      <a href="../PrivacyPolicies/PrivacyPolicies.html">隱私政策</a>
-    </nav>
-  </header>
-  <main>
-    <h1>服務條款與使用者協議</h1>
-    <section>
-      <p>歡迎使用「Start Tracking Meals」App。在使用本應用程式前，請詳閱以下條款。使用本 App 即表示您同意遵守這些條款。</p>
-    </section>
+<body class="antialiased">
+    <!-- Header Section - Matching Homepage Style -->
+    <header class="bg-white shadow-sm py-4 px-6 md:px-12 flex justify-between items-center rounded-b-xl">
+        <div class="flex items-center space-x-2">
+            <!-- Logo with icon - Matching Homepage Style -->
+            <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/>
+            </svg>
+            <div class="text-2xl font-bold text-primary-dark">記食開始</div>
+        </div>
+        <!-- Navigation - Only "首頁" link -->
+        <nav class="hidden md:flex space-x-8 items-center">
+            <a href="../index.html" class="text-primary-dark hover:text-accent font-medium transition-colors duration-200">首頁</a>
+        </nav>
+        <!-- Mobile menu button (hidden on desktop) -->
+        <button class="md:hidden text-primary-dark hover:text-accent focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </header>
 
-    <section>
-      <h2>1. 授權範圍</h2>
-      <p>授予您非專屬、不可轉讓的個人授權，可於您控制的裝置上安裝與使用本 App。</p>
-      <p>禁止轉售、再授權、反編譯或反向工程等行為。</p>
-    </section>
+    <!-- Main Content Container - Styled like a card -->
+    <div class="max-w-4xl mx-auto p-6 md:p-10 bg-white rounded-xl shadow-lg mt-8 mb-12">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 text-center text-primary-dark">服務條款與使用者協議</h1>
 
-    <section>
-      <h2>2. 功能與服務</h2>
-      <ul>
-        <li>每日飲食與營養攝取記錄</li>
-        <li>目標進度顯示與提醒</li>
-        <li>條碼與影像辨識快速輸入</li>
-        <li>資料匯出</li>
-        <li>進階功能需付費解鎖</li>
-      </ul>
-      <p>開發者有權隨時調整 App 功能。</p>
-    </section>
+        <!-- Section 1 -->
+        <div class="pb-6 border-b-2 border-gray-200 mb-6">
+            <p class="text-base mb-3">歡迎使用「Start Tracking Meals」App。在使用本應用程式前，請詳閱以下條款。使用本 App 即表示您同意遵守這些條款。</p>
+        </div>
 
-    <section>
-      <h2>3. 付費與訂閱</h2>
-      <p>所有費用將透過 Apple App Store 處理，一經購買不可退費，除法律另有規定。</p>
-    </section>
+        <!-- Section 2 -->
+        <div class="pb-6 border-b-2 border-gray-200 mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">1. 授權範圍</h2>
+            <p class="text-base mb-3">授予您非專屬、不可轉讓的個人授權，可於您控制的裝置上安裝與使用本 App。</p>
+            <p class="text-base mb-3">禁止轉售、再授權、反編譯或反向工程等行為。</p>
+        </div>
 
-    <section>
-      <h2>4. 個人資料與隱私</h2>
-      <p>App 僅將資料儲存於本機，不會主動上傳至雲端。若啟用第三方服務（如 Gemini API），資料傳送將依該服務條款進行。</p>
-    </section>
+        <!-- Section 3 -->
+        <div class="pb-6 border-b-2 border-gray-200 mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">2. 功能與服務</h2>
+            <ul class="policy-list">
+                <li>每日飲食與營養攝取記錄</li>
+                <li>目標進度顯示與提醒</li>
+                <li>條碼與影像辨識快速輸入</li>
+                <li>資料匯出</li>
+                <li>進階功能需付費解鎖</li>
+            </ul>
+            <p class="text-base mb-3">開發者有權隨時調整 App 功能。</p>
+        </div>
 
-    <section>
-      <h2>5. 使用者責任</h2>
-      <p>您須保證資料正確並維護裝置安全。任何由您行為導致的損失將由您自行承擔。</p>
-    </section>
+        <!-- Section 4 -->
+        <div class="pb-6 border-b-2 border-gray-200 mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">3. 付費與訂閱</h2>
+            <p class="text-base mb-3">所有費用將透過 Apple App Store 處理，一經購買不可退費，除法律另有規定。</p>
+        </div>
 
-    <section>
-      <h2>6. 免責聲明</h2>
-      <p>本 App 所提供內容僅供參考，非醫療建議。開發者不保證功能不中斷或無錯。</p>
-    </section>
+        <!-- Section 5 -->
+        <div class="pb-6 border-b-2 border-gray-200 mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">4. 個人資料與隱私</h2>
+            <p class="text-base mb-3">App 僅將資料儲存於本機，不會主動上傳至雲端。若啟用第三方服務（如 Gemini API），資料傳送將依該服務條款進行。</p>
+        </div>
 
-    <section>
-      <h2>7. 智慧財產權</h2>
-      <p>本 App 所有內容與程式設計皆屬開發者所有，未經同意不得重製或散佈。</p>
-    </section>
+        <!-- Section 6 -->
+        <div class="pb-6 border-b-2 border-gray-200 mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">5. 使用者責任</h2>
+            <p class="text-base mb-3">您須保證資料正確並維護裝置安全。任何由您行為導致的損失將由您自行承擔。</p>
+        </div>
 
-    <section>
-      <h2>8. 終止條款</h2>
-      <p>若違反條款，開發者可隨時終止授權，並要求刪除應用程式。</p>
-    </section>
+        <!-- Section 7 -->
+        <div class="pb-6 border-b-2 border-gray-200 mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">6. 免責聲明</h2>
+            <p class="text-base mb-3">本 App 所提供內容僅供參考，非醫療建議。開發者不保證功能不中斷或無錯。</p>
+        </div>
 
-    <section>
-      <h2>9. 條款修改</h2>
-      <p>開發者保留隨時修改本協議的權利，並於頁面或應用內公告。</p>
-    </section>
+        <!-- Section 8 -->
+        <div class="pb-6 border-b-2 border-gray-200 mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">7. 智慧財產權</h2>
+            <p class="text-base mb-3">本 App 所有內容與程式設計皆屬開發者所有，未經同意不得重製或散佈。</p>
+        </div>
 
-    <section>
-      <h2>10. 法律適用與爭議處理</h2>
-      <p>本協議依照開發者所在地法律解釋，若有疑義請透過 <a href="mailto:chiugastudio@gmail.com">chiugastudio@gmail.com</a> 聯繫。</p>
-    </section>
-  </main>
-  <footer>
-    © 2025 ChiuGa Studio. All rights reserved.
-  </footer>
+        <!-- Section 9 -->
+        <div class="pb-6 border-b-2 border-gray-200 mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">8. 終止條款</h2>
+            <p class="text-base mb-3">若違反條款，開發者可隨時終止授權，並要求刪除應用程式。</p>
+        </div>
 
-  <div class="fixed-tabs">
-    <a href="../supports/support.html">支援</a>
-    <a href="terms.html">使用者條款</a>
-    <a href="../PrivacyPolicies/PrivacyPolicies.html">隱私政策</a>
-  </div>
+        <!-- Section 10 -->
+        <div class="pb-6 border-b-2 border-gray-200 mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">9. 條款修改</h2>
+            <p class="text-base mb-3">開發者保留隨時修改本協議的權利，並於頁面或應用內公告。</p>
+        </div>
+
+        <!-- Section 11 -->
+        <div class="pb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">10. 法律適用與爭議處理</h2>
+            <p class="text-base mb-3">本協議依照開發者所在地法律解釋，若有疑義請透過 <a href="mailto:chiugastudio@gmail.com" class="text-accent hover:underline">chiugastudio@gmail.com</a> 聯繫。</p>
+        </div>
+    </div>
+
+    <!-- Footer Section - Matching Homepage Style with specific layout -->
+    <footer class="bg-accent text-primary-dark py-8 mt-12 rounded-t-xl px-6 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
+            <!-- Left empty column for spacing on desktop -->
+            <div class="hidden md:block"></div>
+            <!-- Links in the middle (centered) -->
+            <div class="flex justify-center space-x-4 order-1 md:order-2">
+                <a href="../supports/support.html" class="text-primary-dark hover:text-white transition-colors duration-200">支援</a>
+                <a href="terms.html" class="text-primary-dark hover:text-white transition-colors duration-200">使用者條款</a>
+                <a href="../PrivacyPolicies/PrivacyPolicies.html" class="text-primary-dark hover:text-white transition-colors duration-200">隱私政策</a>
+            </div>
+            <!-- Copyright on the right -->
+            <p class="order-2 md:order-3 text-center md:text-right">&copy; 2025 ChiuGa Studio. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
