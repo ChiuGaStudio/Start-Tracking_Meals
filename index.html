@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>記食開始</title>
+  <style>
+    :root {
+      --bg-color: #EEEEEE;
+      --text-color: #2D2926;
+      --accent-color: #B8B0A6;
+      --card-bg: #FFFFFF;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background-color: var(--bg-color);
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--text-color);
+    }
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: var(--accent-color);
+    }
+    .hero {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(to right, #ffffff, #f6f6f6);
+      flex-wrap: wrap;
+    }
+    .hero-text {
+      flex: 1 1 400px;
+      padding-right: 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .hero h1 span {
+      color: #ECD676;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+    .cta-btn {
+      padding: 0.8rem 1.6rem;
+      background-color: #009EFF;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .hero-image {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+    }
+    footer {
+      background-color: var(--accent-color);
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+      color: var(--text-color);
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">記食開始</div>
+    <nav>
+      <a href="#features">功能</a>
+      <a href="#showcase">展示</a>
+      <a href="supports/support.html">支援</a>
+      <a href="terms/terms.html">使用者條款</a>
+      <a href="PrivacyPolicies/PrivacyPolicies.html">隱私政策</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>讓你愛上 <span>飲食紀錄</span> 的 App</h1>
+      <p>使用 AI 與攝影技術，快速記下你每日所吃的一切，從健康分析到喝水提醒，打造你的飲食生活習慣！</p>
+      <!-- <button class="cta-btn">立即開始</button> -->
+    </div>
+    <div class="hero-image">
+  <img src="assets/main-portrait.png" alt="App 示意圖" style="max-width: 280px; width: 100%; height: auto;" />
+</div>
+  </section>
+  <footer>
+    © 2024 ChiuGa Studio. All rights reserved.
+  </footer>
+</body>
+</html>

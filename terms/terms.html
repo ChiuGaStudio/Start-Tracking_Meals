@@ -3,186 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>服務條款與最終使用者授權協議</title>
+  <title>服務條款與使用者協議</title>
   <style>
     :root {
-      --background-color: #EEEEEE;
-      --text-primary: #2D2926;
-      --accent-color: #ff7a59;
+      --bg-color: #EEEEEE;
+      --text-color: #2D2926;
+      --accent-color: #B8B0A6;
     }
-
     body {
       margin: 0;
-      background-color: var(--background-color);
-      color: var(--text-primary);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
     }
-
     header {
-      padding: 24px 10px;
+      background-color: var(--accent-color);
+      padding: 2rem;
       text-align: center;
-      border-bottom: 2px solid black;
     }
-
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
-      font-weight: 600;
+      font-size: 2rem;
+      font-weight: bold;
     }
-
-    .container {
-      max-width: 720px;
-      margin: 16px auto;
-      padding: 0 12px;
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+      background-color: var(--accent-color);
     }
-
-    .section {
-      border-bottom: 2px solid black;
-      padding: 20px 0;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      margin-bottom: 12px;
-      font-weight: 600;
-    }
-
-    p, li {
-      font-size: 1rem;
-      margin-bottom: 12px;
-    }
-
-    li {
-      margin-left: 1.2rem;
-    }
-
-    .compact-list {
-      padding-left: 1rem;
-      margin-left: 0;
-    }
-
-    .compact-list li {
-      margin-left: 0;
-      padding-left: 0;
-      list-style-position: inside;
-    }
-
-    a {
-      color: var(--accent-color);
+    nav a {
       text-decoration: none;
+      color: var(--text-color);
+      font-weight: bold;
     }
-
-    a:hover {
+    nav a:hover {
       text-decoration: underline;
     }
-
-    .footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-      margin: 40px 0 20px 0;
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem 1rem;
     }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.6rem;
-      }
-
-      h2 {
-        font-size: 1.2rem;
-      }
-
-      .container {
-        padding: 0 16px;
-      }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 2rem;
+    }
+    p, li {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    footer {
+      background-color: var(--accent-color);
+      text-align: center;
+      padding: 1.2rem 1rem;
+      font-size: 0.9rem;
+      color: var(--text-color);
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>服務條款與最終使用者授權協議</h1>
+    <h1>服務條款與使用者協議</h1>
   </header>
+  <nav>
+    <a href="../index.html">首頁</a>
+    <a href="PrivacyPolicies.html">隱私政策</a>
+  </nav>
+  <main>
+    <section>
+      <p>歡迎使用「Start Tracking Meals」App。在使用本應用程式前，請詳閱以下條款。使用本 App 即表示您同意遵守這些條款。</p>
+    </section>
 
-  <div class="container">
-
-    <div class="section">
-      <p>歡迎您使用「Start Tracking Meals」（以下簡稱「本應用程式」或「本 App」）。在安裝、存取或使用本應用程式前，請仔細閱讀以下條款。若您開始使用本 App，即視為同意遵守本協議內容。如果您不同意，請勿下載、安裝或使用本 App。</p>
-    </div>
-
-    <div class="section">
+    <section>
       <h2>1. 授權範圍</h2>
-      <p>本 App 由開發者以「現狀」提供，授予您非專屬、不可轉讓且僅供個人使用的權利，以於您擁有或控制的 iOS 裝置上安裝和使用本 App。</p>
-      <p>您不得透過任何方式轉售、再授權、反向工程、反編譯或試圖取得本 App 的原始碼，也不得用於非法或未經授權的目的。</p>
-    </div>
+      <p>授予您非專屬、不可轉讓的個人授權，可於您控制的裝置上安裝與使用本 App。</p>
+      <p>禁止轉售、再授權、反編譯或反向工程等行為。</p>
+    </section>
 
-    <div class="section">
+    <section>
       <h2>2. 功能與服務</h2>
-      <ul class="compact-list">
-        <li>記錄每日飲食、攝取的營養成分與水份。</li>
-        <li>依設定目標顯示每日卡路里、蛋白質與其他數值的進度。</li>
-        <li>以攝影或條碼掃描方式快速填入食品資訊，並可選擇使用第三方服務（如 Google Gemini）分析照片或取得建議。</li>
-        <li>匯出您的飲食與體重等紀錄。</li>
-        <li>付費解鎖的進階功能，如體重追蹤、深入分析與通知排程等。</li>
+      <ul>
+        <li>每日飲食與營養攝取記錄</li>
+        <li>目標進度顯示與提醒</li>
+        <li>條碼與影像辨識快速輸入</li>
+        <li>資料匯出</li>
+        <li>進階功能需付費解鎖</li>
       </ul>
-      <p>本 App 可能不時更新或調整功能。開發者得無須事先通知，即隨時變更、暫停或停止提供本 App 的任何部分或全部功能。</p>
-    </div>
+      <p>開發者有權隨時調整 App 功能。</p>
+    </section>
 
-    <div class="section">
+    <section>
       <h2>3. 付費與訂閱</h2>
-      <p>若您選購付費或訂閱項目，相關費用將透過 Apple 之 App Store 機制收取。所有費用繳納後恕不退還，除非適用法律另有規定。</p>
-      <p>部分進階功能可能需要有效的訂閱或一次性購買才能使用。若您取消訂閱或未完成購買，本 App 可能會限制或停止提供該等功能。</p>
-    </div>
+      <p>所有費用將透過 Apple App Store 處理，一經購買不可退費，除法律另有規定。</p>
+    </section>
 
-    <div class="section">
+    <section>
       <h2>4. 個人資料與隱私</h2>
-      <p>本 App 所有記錄資料（例如飲食、體重、個人設定）皆儲存於您的裝置上。本 App 不會主動將您的個人資料傳送至開發者或第三方伺服器，除非您另行同意或功能需要。</p>
-      <p>若您啟用第三方服務（例如 Google Gemini AI）以進行營養資訊分析或圖像辨識，相關資料將依照該服務的隱私政策傳輸與處理。開發者不負責第三方服務蒐集或處理資料的方式。</p>
-      <p>請妥善保管您的裝置與個人資料。若因您自行提供或分享資訊導致隱私外洩，開發者概不負責。</p>
-    </div>
+      <p>App 僅將資料儲存於本機，不會主動上傳至雲端。若啟用第三方服務（如 Gemini API），資料傳送將依該服務條款進行。</p>
+    </section>
 
-    <div class="section">
+    <section>
       <h2>5. 使用者責任</h2>
-      <p>您同意不將本 App 用於任何非法、侵權、騷擾、誹謗或其他不當之用途。</p>
-      <p>您應自行負責帳號（若有）、密碼及裝置安全，並確保所有輸入資料的準確性。若因您的行為或輸入錯誤導致資料遺失或第三方索賠，您須自行承擔相關責任。</p>
-    </div>
+      <p>您須保證資料正確並維護裝置安全。任何由您行為導致的損失將由您自行承擔。</p>
+    </section>
 
-    <div class="section">
+    <section>
       <h2>6. 免責聲明</h2>
-      <p>本 App 提供的飲食或營養資訊僅供參考，不應視為醫療或專業健康建議。若您有任何健康疑慮，應尋求醫療專業人員意見。</p>
-      <p>雖然開發者力求程式準確與穩定，但不保證本 App 完全沒有錯誤、漏洞或中斷。對於因使用或無法使用本 App 而可能造成的任何直接、間接、附帶或衍生損害，開發者不承擔責任。</p>
-      <p>若您透過本 App 使用第三方服務，其內容或結果由該服務供應商負責。開發者對第三方服務的準確性或可靠性不作任何保證。</p>
-    </div>
+      <p>本 App 所提供內容僅供參考，非醫療建議。開發者不保證功能不中斷或無錯。</p>
+    </section>
 
-    <div class="section">
+    <section>
       <h2>7. 智慧財產權</h2>
-      <p>本 App 之程式碼、設計、圖示及相關內容均屬開發者或其授權人所有，受著作權與相關法律保護。</p>
-      <p>除本協議明確授權外，您不得擅自複製、修改、散布或創作衍生作品。</p>
-    </div>
+      <p>本 App 所有內容與程式設計皆屬開發者所有，未經同意不得重製或散佈。</p>
+    </section>
 
-    <div class="section">
-      <h2>8. 終止</h2>
-      <p>若您違反本協議條款，開發者有權隨時終止您的使用授權，而無須事先通知。</p>
-      <p>協議終止後，您必須立即停止使用並刪除本 App。終止不影響雙方在終止前已產生的權利與義務。</p>
-    </div>
+    <section>
+      <h2>8. 終止條款</h2>
+      <p>若違反條款，開發者可隨時終止授權，並要求刪除應用程式。</p>
+    </section>
 
-    <div class="section">
-      <h2>9. 協議變更</h2>
-      <p>開發者保留隨時修改本協議的權利。若條款有所更新，將在應用程式或相關網站公告。您繼續使用本 App，即視為接受修改後的條款。</p>
-    </div>
+    <section>
+      <h2>9. 條款修改</h2>
+      <p>開發者保留隨時修改本協議的權利，並於頁面或應用內公告。</p>
+    </section>
 
-    <div class="section">
-      <h2>10. 準據法與管轄</h2>
-      <p>本協議以開發者所在地法律為準據法，並以該地法院為專屬管轄法院（除非適用法律另有強制規定）。</p>
-      <p>若您對本協議有任何疑問，請透過 <a href="https://github.com/ChiuGaStudio/Start-Tracking_Meals/issues" target="_blank">GitHub 專案頁面</a> 或寄信至 <a href="mailto:chiugastudio@gmail.com">chiugastudio@gmail.com</a> 與我們聯繫。</p>
-    </div>
-
-  </div>
-
-  <div class="footer">
-    &copy; 2025 ChiuGa Studio. All rights reserved.
-  </div>
-
+    <section>
+      <h2>10. 法律適用與爭議處理</h2>
+      <p>本協議依照開發者所在地法律解釋，若有疑義請透過 <a href="mailto:chiugastudio@gmail.com">chiugastudio@gmail.com</a> 聯繫。</p>
+    </section>
+  </main>
+  <footer>
+    © 2025 ChiuGa Studio. All rights reserved.
+  </footer>
 </body>
 </html>
