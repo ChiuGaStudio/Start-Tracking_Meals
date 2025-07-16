@@ -30,7 +30,7 @@
         }
         /* 手機框架樣式 */
         .phone-frame {
-            @apply relative bg-gray-900 rounded-[2.5rem] p-2 shadow-2xl;
+            @apply relative bg-gray-900 rounded-[4.5rem] p-2 shadow-2xl;
             width: 240px; /* Adjust as needed - Increased from 200px */
             height: 480px; /* Adjust as needed - Increased from 400px */
         }
@@ -47,7 +47,7 @@
 </head>
 <body class="antialiased">
     <!-- Header Section -->
-    <header class="bg-white shadow-sm py-4 px-6 md:px-12 flex justify-between items-center rounded-b-xl">
+    <header class="sticky top-0 z-10 bg-white shadow-sm py-4 px-6 md:px-12 flex justify-between items-center rounded-b-xl">
         <a href="index.html" class="flex items-center space-x-2">
             <!-- Logo with icon -->
             <svg class="w-8 h-8 text-[#B8B0A6]" fill="currentColor" viewBox="0 0 24 24">
@@ -57,7 +57,7 @@
         </a>
         <nav class="hidden md:flex space-x-8">
             <a href="#" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">首頁</a>
-            <a href="#features" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">功能</a>
+            <a href="#features" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">功能說明</a>
             <a href="#showcase" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">版本比較</a>
         </nav>
         <!-- Mobile menu button (hidden on desktop) -->
@@ -70,7 +70,7 @@
     <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md px-6 pb-4">
         <nav class="flex flex-col space-y-2">
             <a href="#" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">首頁</a>
-            <a href="#features" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">功能</a>
+            <a href="#features" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">功能說明</a>
             <a href="#showcase" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">版本比較</a>
         </nav>
     </div>
@@ -78,14 +78,14 @@
     <!-- Hero Section -->
     <section class="hero-gradient py-16 md:py-24 px-6 md:px-12 text-[#2D2926] flex flex-col md:flex-row items-center justify-between gap-12 rounded-b-xl">
         <!-- Hero Text Content -->
-        <div class="flex-1 text-center md:text-center">
+        <div class="flex-1 text-leading md:text-leading">
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
                 讓你愛上 <span class="text-[#ECD676]">飲食紀錄</span> 的 App
             </h1>
             <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto md:mx-0 opacity-90">
                 使用 AI 與攝影技術，快速記下你每日所吃的一切，從健康分析到喝水提醒，打造你的飲食生活習慣！
             </p>
-            <div class="flex flex-col sm:flex-row justify-center md:justify-center gap-4">
+            <div class="flex flex-col sm:flex-row justify-leading md:justify-leading gap-4">
                 <!-- Apple App Store Button -->
                 <a href="#" class="app-store-btn apple">
                     <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -174,11 +174,6 @@
                 </h3>
                 <p class="text-sm">方便且聰明的為您辨識照片中，食物的營養成分，也支援拍攝營養標示表，並自動填入分析結果，加快您每日記食的速度。</p>
             </div>
-            <!-- <div class="bg-gray-50 p-6 rounded-lg shadow text-center">
-                <div class="text-4xl mb-4">⭐</div>
-                <h3 class="font-semibold mb-2">付費功能</h3>
-                <p class="text-sm">解鎖體重追蹤與進階分析，可恢復先前購買。</p>
-            </div> -->
         </div>
     </section>
 
