@@ -36,7 +36,7 @@
 </head>
 <body class="antialiased">
     <!-- Header Section - Matching Homepage Style -->
-    <header class="bg-white shadow-sm py-4 px-6 md:px-12 flex justify-between items-center rounded-b-xl">
+    <header class="sticky top-0 z-10 bg-white shadow-sm py-4 px-6 md:px-12 flex justify-between items-center rounded-b-xl">
           <a href="../index.html" class="flex items-center space-x-2">
             <!-- Logo with icon - Matching Homepage Style -->
             <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
@@ -65,77 +65,137 @@
     <div class="max-w-4xl mx-auto p-6 md:p-10 bg-white rounded-xl shadow-lg mt-8 mb-12">
         <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 text-center text-primary-dark">服務條款與使用者協議</h1>
 
-        <!-- Section 1 -->
-        <div class="pb-6 border-b-2 border-gray-200 mb-6">
-            <p class="text-base mb-3">歡迎使用「Start Tracking Meals」App。在使用本應用程式前，請詳閱以下條款。使用本 App 即表示您同意遵守這些條款。</p>
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">一、認知與接受條款</h2>
+            <p class="text-base mb-3">本《使用者授權條款》(以下簡稱「本條款」) 係由您（以下稱「終端使用者」或「您」）與 ChiuGaStudio（以下稱「本公司」或「我們」）就「記食開始」行動應用程式（以下稱「本 App」）所訂立。</p>
+            <p class="text-base mb-3">您下載、安裝、存取或使用本 App，即表示您已閱讀、理解並同意受本條款約束；若您不同意任何條款，請勿使用本 App。</p>
+            <p class="text-base mb-3">我們得隨時修改本條款並於本 App 或官方網站公告。修訂後若您仍繼續使用本 App，即視為您同意修訂內容。</p>
         </div>
 
-        <!-- Section 2 -->
-        <div class="pb-6 border-b-2 border-gray-200 mb-6">
-            <h2 class="text-2xl font-bold mb-4 text-primary-dark">1. 授權範圍</h2>
-            <p class="text-base mb-3">授予您非專屬、不可轉讓的個人授權，可於您控制的裝置上安裝與使用本 App。</p>
-            <p class="text-base mb-3">禁止轉售、再授權、反編譯或反向工程等行為。</p>
+       <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">二、授權範圍</h2>
+            <p class="text-base mb-3">我們授予您在個人持有或控制的 Apple 裝置上安裝及使用本 App 的非獨占、不可轉讓、有限授權，並以 Apple 媒體服務條款與條件所載之「使用規則」為限。</p>
+            <p class="text-base mb-3">未經明示授權，您不得轉售、出租、再授權本 App；亦不得對本 App 進行反向工程、反編譯、拆解、修改或衍生其他作品，但法律另有允許者除外。</p>
+            <p class="text-base mb-3">您得透過 Apple 的「家人共享」或大量採購機制使用本 App，但仍須遵守本條款與 Apple 相關規定。</p>
         </div>
 
-        <!-- Section 3 -->
-        <div class="pb-6 border-b-2 border-gray-200 mb-6">
-            <h2 class="text-2xl font-bold mb-4 text-primary-dark">2. 功能與服務</h2>
-            <ul class="policy-list">
-                <li>每日飲食與營養攝取記錄</li>
-                <li>目標進度顯示與提醒</li>
-                <li>條碼與影像辨識快速輸入</li>
-                <li>資料匯出</li>
-                <li>進階功能需付費解鎖</li>
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">三、服務內容</h2>
+            <h3 class="text-xl font-semibold mb-2 text-primary-dark">基本功能</h3>
+            <ul class="policy-list mb-4">
+                <li>新增、編輯及刪除餐點，記錄熱量、蛋白質、脂肪與碳水化合物。</li>
+                <li>內建食物資料庫與自建項目管理。</li>
+                <li>透過日曆與主畫面小工具檢視每日進度與餐點。</li>
+                <li>個人化設定每日目標、語言與主題模式。</li>
+                <li>透過匯入/匯出功能備份或復原資料。</li>
             </ul>
-            <p class="text-base mb-3">開發者有權隨時調整 App 功能。</p>
+            <h3 class="text-xl font-semibold mb-2 text-primary-dark">付費訂閱功能</h3>
+            <ul class="policy-list">
+                <li>相機掃描條碼或照片辨識營養資訊：利用相機掃描食物條碼或拍攝營養標籤，由系統自動分析並填入營養數據。</li>
+                <li>Google Gemini AI 分析：將拍攝的餐點或營養標籤照片送交 Google Gemini AI 分析，或利用 AI 搜尋食物營養成分並自動帶入資料。</li>
+                <li>記錄喝水量、運動時長與「偷吃」點心：以專屬頁面記錄每日喝水量、運動時間及偷吃小點心，並檢視統計圖表。</li>
+                <li>體重追蹤：每日輸入體重並檢視歷史趨勢。</li>
+                <li>進階分析與飲食控制工具：提供更深入的統計圖表、建議與目標分析。</li>
+                <li>通知排程：自訂推播通知時間，例如喝水提醒或每日分析推播。</li>
+            </ul>
         </div>
 
-        <!-- Section 4 -->
-        <div class="pb-6 border-b-2 border-gray-200 mb-6">
-            <h2 class="text-2xl font-bold mb-4 text-primary-dark">3. 付費與訂閱</h2>
-            <p class="text-base mb-3">所有費用將透過 Apple App Store 處理，一經購買不可退費，除法律另有規定。</p>
+       <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">四、訂閱、付款與續約</h2>
+            <p class="text-base mb-3">付費訂閱須透過 Apple 的應用程式內付費 (IAP) 機制購買，可選擇月繳或年繳方案，實際費用以 App Store 顯示為準。</p>
+            <p class="text-base mb-3">所有訂閱均為自動續訂。若您欲終止續訂，需於目前訂閱期間結束前至少 24 小時在 Apple ID 帳戶設定中取消。</p>
+            <p class="text-base mb-3">完成付款後，除依適用法令或 Apple 政策另有規定外，恕不提供退款。</p>
+            <p class="text-base mb-3">更換裝置時，可在付費資訊頁面使用「恢復購買」以同步訂閱狀態。</p>
         </div>
 
-        <!-- Section 5 -->
-        <div class="pb-6 border-b-2 border-gray-200 mb-6">
-            <h2 class="text-2xl font-bold mb-4 text-primary-dark">4. 個人資料與隱私</h2>
-            <p class="text-base mb-3">App 僅將資料儲存於本機，不會主動上傳至雲端。若啟用第三方服務（如 Gemini API），資料傳送將依該服務條款進行。</p>
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">五、資料使用與隱私</h2>
+            <h3 class="text-xl font-semibold mb-2 text-primary-dark">使用者資料</h3>
+            <p class="text-base mb-3">您應確保您所輸入、掃描或上傳的餐點、照片及其他資料均享有合法權利，且不得違反任何隱私或智慧財產權。</p>
+            <p class="text-base mb-3">為提供服務，本 App 可能在裝置本地或雲端儲存、處理及顯示相關資料。</p>
+            <p class="text-base mb-3">您的資料使用方式詳載於本 App 的《隱私政策》，該政策構成本條款之一部分。</p>
+            <h3 class="text-xl font-semibold mb-2 text-primary-dark">AI 與辨識功能</h3>
+            <p class="text-base mb-3">付費功能包括使用 Google Gemini AI 辨識照片與搜尋食物營養資訊。AI 辨識結果僅供參考，準確性可能受到限制。</p>
+            <p class="text-base mb-3">我們不保證 AI 分析或條碼辨識的完整性或正確性，您應自行確認並承擔使用結果。</p>
+            <h3 class="text-xl font-semibold mb-2 text-primary-dark">技術與匿名資料收集</h3>
+            <p class="text-base mb-3">為改善產品，我們可能蒐集裝置型號、系統版本等匿名技術資料，但不會識別個人身份。</p>
         </div>
 
-        <!-- Section 6 -->
-        <div class="pb-6 border-b-2 border-gray-200 mb-6">
-            <h2 class="text-2xl font-bold mb-4 text-primary-dark">5. 使用者責任</h2>
-            <p class="text-base mb-3">您須保證資料正確並維護裝置安全。任何由您行為導致的損失將由您自行承擔。</p>
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">六、智慧財產權</h2>
+            <p class="text-base mb-3">本 App 之程式碼、介面、商標、圖像及其他內容的智慧財產權均屬本公司或授權人所有。</p>
+            <p class="text-base mb-3">未經書面同意，您不得複製、散布或公開傳輸本 App 的任何部分。第三方程式庫或服務需依其各自的授權條款使用。</p>
         </div>
 
-        <!-- Section 7 -->
-        <div class="pb-6 border-b-2 border-gray-200 mb-6">
-            <h2 class="text-2xl font-bold mb-4 text-primary-dark">6. 免責聲明</h2>
-            <p class="text-base mb-3">本 App 所提供內容僅供參考，非醫療建議。開發者不保證功能不中斷或無錯。</p>
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">七、服務變更、暫停與終止</h2>
+            <p class="text-base mb-3">我們可能因維護、更新或其他需求，變更或暫停本 App 的部分或全部功能（包含付費功能），並可調整價格。若有重大變更，將於 App 或官網上公告。</p>
+            <p class="text-base mb-3">您可隨時停用或刪除本 App；付費訂閱仍須依 Apple 流程取消，否則將繼續扣款。</p>
+            <p class="text-base mb-3">若您違反本條款或相關法令，我們得限制或終止您使用本 App，並保留追究法律責任之權利。</p>
         </div>
 
-        <!-- Section 8 -->
-        <div class="pb-6 border-b-2 border-gray-200 mb-6">
-            <h2 class="text-2xl font-bold mb-4 text-primary-dark">7. 智慧財產權</h2>
-            <p class="text-base mb-3">本 App 所有內容與程式設計皆屬開發者所有，未經同意不得重製或散佈。</p>
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">八、維護與支援</h2>
+            <p class="text-base mb-3">本公司負責依本條款與適用法規提供維護與支援服務。</p>
+            <p class="text-base mb-3">Apple 對本 App 無維護或支援義務，若有疑問請直接聯繫本公司。</p>
         </div>
 
-        <!-- Section 9 -->
-        <div class="pb-6 border-b-2 border-gray-200 mb-6">
-            <h2 class="text-2xl font-bold mb-4 text-primary-dark">8. 終止條款</h2>
-            <p class="text-base mb-3">若違反條款，開發者可隨時終止授權，並要求刪除應用程式。</p>
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">九、擔保</h2>
+            <p class="text-base mb-3">本 App 依「現狀」及「現有」方式提供，本公司不就其性能、適用性或錯誤修正作任何明示或默示擔保。</p>
+            <p class="text-base mb-3">若本 App 未符合任何適用擔保，您可向 Apple 申請退費（如適用）；Apple 不負其他相關責任。</p>
+            <p class="text-base mb-3">本公司不保證 AI 辨識或其他付費功能之結果完全準確，亦不對任何因使用或無法使用本 App 所造成的資料遺失或損害負責。</p>
         </div>
 
-        <!-- Section 10 -->
-        <div class="pb-6 border-b-2 border-gray-200 mb-6">
-            <h2 class="text-2xl font-bold mb-4 text-primary-dark">9. 條款修改</h2>
-            <p class="text-base mb-3">開發者保留隨時修改本協議的權利，並於頁面或應用內公告。</p>
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">十、產品索賠</h2>
+            <p class="text-base mb-3">您理解並同意，任何因本 App 或您對本 App 的使用所提出的索賠（例如產品責任、法規遵循或消費者保護等）均由本公司負責處理，與 Apple 無涉。</p>
         </div>
 
-        <!-- Section 11 -->
-        <div class="pb-6">
-            <h2 class="text-2xl font-bold mb-4 text-primary-dark">10. 法律適用與爭議處理</h2>
-            <p class="text-base mb-3">本協議依照開發者所在地法律解釋，若有疑義請透過 <a href="mailto:chiugastudio@gmail.com" class="text-accent hover:underline">chiugastudio@gmail.com</a> 聯繫。</p>
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">十一、責任限制</h2>
+            <p class="text-base mb-3">在法律允許範圍內，本公司對因使用或無法使用本 App 所造成之任何直接、間接或衍生損害，不負賠償責任。</p>
+            <p class="text-base mb-3">在任何情況下，本公司對所有損害向您負之總責任，以您在導致索賠事件前十二個月內為使用付費服務實際支付的金額或五十美元（以較高者為準）為限。</p>
+        </div>
+
+      <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">十二、智慧財產權索賠</h2>
+            <p class="text-base mb-3">若第三方主張本 App 侵害其智慧財產權，本公司將負責調查、辯護及處理相關索賠，Apple 不負責任。</p>
+        </div>
+
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">十三、法律遵循</h2>
+            <p class="text-base mb-3">您保證未位於受美國政府禁運或限制的國家，亦未被列入美國政府禁止或限制名單。</p>
+        </div>
+
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">十四、第三方協議條款</h2>
+            <p class="text-base mb-3">使用本 App 時，您應遵守任何適用的第三方協議條款，例如電信業者或雲端服務的使用規範。</p>
+        </div>
+
+         <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">十五、第三方受益人</h2>
+            <p class="text-base mb-3">您與本公司均同意 Apple 及其子公司為本條款的第三方受益人，當您接受本條款後，Apple 即有權以第三方受益人身份對您執行本條款。</p>
+        </div>
+
+       <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">十六、準據法與爭議解決</h2>
+            <p class="text-base mb-3">本條款之解釋與適用均以中華民國（台灣）法律為準據法。</p>
+            <p class="text-base mb-3">因本條款或本 App 所生的任何爭議，雙方應先友好協商；協商不成時，以台灣台北地方法院為第一審專屬管轄法院。</p>
+        </div>
+
+       <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">十七、開發者名稱與地址</h2>
+            <p class="text-base mb-3">如有任何疑問、意見或投訴，請聯繫：</p>
+            <p class="text-base mb-3">開發者：ChiuGaStudio</p>
+            <p class="text-base mb-3">電子郵件：請依 App 內聯絡資訊為準</p>
+        </div>
+
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary-dark">十八、一般條款</h2>
+            <p class="text-base mb-3">本條款與《隱私政策》構成您與本公司之完整協議，並取代任何先前或同時期之口頭或書面協議。</p>
+            <p class="text-base mb-3">若本條款任一條文被認定無效或不可執行，其他條文仍具完整效力。</p>
+            <p class="text-base mb-3">本公司未行使或執行本條款之任何權利或條款，並不構成對該權利或條款之放棄。</p>
         </div>
     </div>
 
