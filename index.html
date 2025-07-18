@@ -42,17 +42,16 @@
         }
         /* Feature card with 3D interactive effect */
         .feature-card {
-            @apply bg-white p-8 rounded-2xl shadow-lg text-center overflow-hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
+           @apply bg-white p-8 rounded-3xl shadow-xl text-center overflow-hidden transition-all duration-300 ease-in-out;
             transform-style: preserve-3d;
         }
         .feature-card:hover {
-            transform: perspective(600px) rotateX(6deg) rotateY(6deg) translateY(-4px);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+           transform: perspective(600px) rotateX(4deg) rotateY(4deg) translateY(-4px) scale(1.03);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
         }
         .feature-card:active {
-            transform: perspective(600px) scale(0.98);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+             transform: perspective(600px) scale(0.97);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
         .feature-icon {
             @apply flex items-center justify-center w-20 h-20 mx-auto mb-4 rounded-full bg-gray-100 shadow-inner text-5xl;
