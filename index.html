@@ -49,13 +49,14 @@
     <!-- Header Section -->
     <header class="sticky top-0 z-10 bg-white shadow-sm py-4 px-6 md:px-12 flex justify-between items-center rounded-b-xl">
         <a href="index.html" class="flex items-center space-x-2">
-            <img src="assets/start_tracking_meals_with_white_bg.png" alt="Logo" class="w-8 h-8 object-contain" />
-            <div id="site-name" class="text-3xl md:text-4xl font-bold text-[#2D2926]">記食開始</div>
+            <img src="assets/start_tracking_meals_with_white_bg.png" alt="Logo" class="w-10 h-10 object-contain" />
+            <div class="text-xl md:text-2xl font-bold text-[#2D2926]">記食開始</div>
         </a>
         <nav class="hidden md:flex space-x-8">
             <a id="nav-home" href="#" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">首頁</a>
             <a id="nav-features" href="#features" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">功能說明</a>
             <a id="nav-showcase" href="#showcase" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">版本比較</a>
+            <a id="nav-qanda" href="#qanda" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">Q&A</a>
         </nav>
         <select id="lang-switcher" class="hidden md:block border border-gray-300 rounded-md text-sm px-2 py-1 ml-4">
             <option value="zh-TW">繁體中文</option>
@@ -75,6 +76,7 @@
             <a id="nav-mobile-home" href="#" class="text-xl py-3 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">首頁</a>
             <a id="nav-mobile-features" href="#features" class="text-xl py-3 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">功能說明</a>
             <a id="nav-mobile-showcase" href="#showcase" class="text-xl py-3 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">版本比較</a>
+            <a id="nav-mobile-qanda" href="#qanda" class="text-xl py-3 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">Q&A</a>
         </nav>
         <select id="lang-switcher-mobile" class="mt-4 border border-gray-300 rounded-md text-sm px-2 py-1">
             <option value="zh-TW">繁體中文</option>
@@ -91,13 +93,13 @@
             <h1 id="hero-title1" class="text-4xl md:text-5xl lg:text-8xl font-extrabold leading-tight mb-6">
                 記食開始
             </h1>
-            <h1 id="hero-title2" class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
+            <h1 id="hero-title2" class="text-2xl md:text-3xl lg:text-4xl font-extrabold leading-tight mb-6">
                 讓你愛上 <span class="text-[#ECD676]">記錄飲食</span> 的App
             </h1>
-            <p id="hero-p1" class="text-lg md:text-xl mb-0 max-w-2xl mx-auto md:mx-0 opacity-90">
+            <p id="hero-p1" class="text-lg md:text-xl mb-0 max-w-2xl mx-auto md:mx-0 opacity-70">
                 輕鬆管理飲食、追蹤每日熱量與營養，讓健康目標不再遙不可及！
             </p>
-            <p id="hero-p2" class="text-lg md:text-xl mb-8 max-w-2xl mx-auto md:mx-0 opacity-90">
+            <p id="hero-p2" class="text-lg md:text-xl mb-8 max-w-2xl mx-auto md:mx-0 opacity-70">
                 使用AI與攝影技術，快速記下你每日所吃的一切，從健康分析到喝水提醒，打造你的飲食生活習慣！
             </p>
             <div class="flex flex-col sm:flex-row justify-leading md:justify-leading gap-4">
@@ -128,7 +130,7 @@
                 </div>
             </div>
         </div>
-    </section>
+   </section>
 
      <!-- Features Section -->
     <section id="features" class="py-12 px-6 md:px-12 bg-white text-[#2D2926] scroll-mt-20">
@@ -308,6 +310,58 @@
                 </tbody>
             </table>
         </div>
+        </section>
+
+    <!-- Q&A Section -->
+    <section id="qanda" class="py-12 px-6 md:px-12 bg-white text-[#2D2926]">
+        <h2 id="qa-title" class="text-2xl font-bold mb-10 text-center">常見問題</h2>
+        <div id="qa-list" class="max-w-3xl mx-auto space-y-4">
+            <div class="border-b">
+                <button type="button" data-answer="qa-a1" class="w-full flex justify-between items-center py-4 focus:outline-none">
+                    <span id="qa-q1">記食開始App需要付費嗎？</span>
+                    <span class="ml-2">+</span>
+                </button>
+                <div id="qa-a1" class="hidden pb-4">
+                    <p id="qa-a1-text">基本功能免費使用，如需更進階分析與提醒，可升級 Premium 版。</p>
+                </div>
+            </div>
+            <div class="border-b">
+                <button type="button" data-answer="qa-a2" class="w-full flex justify-between items-center py-4 focus:outline-none">
+                    <span id="qa-q2">Premium 版有哪些額外功能？</span>
+                    <span class="ml-2">+</span>
+                </button>
+                <div id="qa-a2" class="hidden pb-4">
+                    <p id="qa-a2-text">Premium 提供進階記食分析、喝水追蹤等更多工具。</p>
+                </div>
+            </div>
+            <div class="border-b">
+                <button type="button" data-answer="qa-a3" class="w-full flex justify-between items-center py-4 focus:outline-none">
+                    <span id="qa-q3">離線時可以使用嗎？</span>
+                    <span class="ml-2">+</span>
+                </button>
+                <div id="qa-a3" class="hidden pb-4">
+                    <p id="qa-a3-text">可以離線紀錄，連網後會自動同步。</p>
+                </div>
+            </div>
+            <div class="border-b">
+                <button type="button" data-answer="qa-a4" class="w-full flex justify-between items-center py-4 focus:outline-none">
+                    <span id="qa-q4">如何匯出我的記食資料？</span>
+                    <span class="ml-2">+</span>
+                </button>
+                <div id="qa-a4" class="hidden pb-4">
+                    <p id="qa-a4-text">在設定頁面的「資料匯出」即可下載所有紀錄。</p>
+                </div>
+            </div>
+            <div class="border-b">
+                <button type="button" data-answer="qa-a5" class="w-full flex justify-between items-center py-4 focus:outline-none">
+                    <span id="qa-q5">目前支援哪些語言？</span>
+                    <span class="ml-2">+</span>
+                </button>
+                <div id="qa-a5" class="hidden pb-4">
+                    <p id="qa-a5-text">目前支援繁體中文、英文、韓文與日文。</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer Section -->
@@ -338,15 +392,37 @@
         }
     </script>
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const qaButtons = document.querySelectorAll('#qa-list button');
+            qaButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const target = document.getElementById(btn.dataset.answer);
+                    const open = document.querySelector('#qa-list .block');
+                    if (open && open !== target) {
+                        open.classList.add('hidden');
+                        open.classList.remove('block');
+                        open.previousElementSibling.querySelector('span:last-child').textContent = '+';
+                    }
+                    target.classList.toggle('hidden');
+                    target.classList.toggle('block');
+                    const icon = btn.querySelector('span:last-child');
+                    icon.textContent = target.classList.contains('hidden') ? '+' : '-';
+                });
+            });
+        });
+    </script>
+    <script>
         const translations = {
             'zh-TW': {
                 'site-name': '記食開始',
                 'nav-home': '首頁',
                 'nav-features': '功能說明',
                 'nav-showcase': '版本比較',
+                'nav-qanda': 'Q&A',
                 'nav-mobile-home': '首頁',
                 'nav-mobile-features': '功能說明',
                 'nav-mobile-showcase': '版本比較',
+                'nav-mobile-qanda': 'Q&A',
                 'hero-title1': '記食開始',
                 'hero-title2': '讓你愛上 <span class="text-[#ECD676]">記錄飲食</span> 的App',
                 'hero-p1': '輕鬆管理飲食、追蹤每日熱量與營養，讓健康目標不再遙不可及！',
@@ -385,6 +461,17 @@
                 'row-ai-food': 'AI辨識記食-食物辨識分析',
                 'row-ai-chart': 'AI辨識記食-圖表辨識分析',
                 'row-ai-name': 'AI辨識記食-名稱分析',
+                'qa-title': '常見問題',
+                'qa-q1': '記食開始App需要付費嗎？',
+                'qa-a1': '基本功能免費使用，但如果需要看到更視覺化的分析圖與自動辨識功能，可升級為 Premium 版本。',
+                'qa-q2': 'Premium 版本有哪些額外功能？',
+                'qa-a2': 'Premium 版本相關功能，可以參考上方的"功能說明"。',
+                'qa-q3': '離線時可以使用嗎？',
+                'qa-a3': '大部分功能皆可離線使用，而個人記錄都會存在手機中，唯獨使用自動辨識功能需要開啟網路。',
+                'qa-q4': '如何匯出我的記食資料？',
+                'qa-a4': '需要Premium 版本！在設定頁面的「資料匯出」即可分享所有紀錄。',
+                'qa-q5': '目前支援哪些語言？',
+                'qa-a5': '目前支援繁體中文、英文、韓文與日文。',
                 'footer-support': '支援',
                 'footer-terms': '使用者條款',
                 'footer-privacy': '隱私政策',
@@ -395,9 +482,11 @@
                 'nav-home': 'Home',
                 'nav-features': 'Features',
                 'nav-showcase': 'Comparison',
+                'nav-qanda': 'Q&A',
                 'nav-mobile-home': 'Home',
                 'nav-mobile-features': 'Features',
                 'nav-mobile-showcase': 'Comparison',
+                'nav-mobile-qanda': 'Q&A',
                 'hero-title1': 'Start Tracking Meals',
                 'hero-title2': 'The app that makes you love <span class="text-[#ECD676]">tracking meals</span>',
                 'hero-p1': 'Easily manage meals and track daily calories and nutrition so your goals are within reach!',
@@ -436,6 +525,17 @@
                 'row-ai-food': 'AI Food Analysis',
                 'row-ai-chart': 'AI Chart Analysis',
                 'row-ai-name': 'AI Name Analysis',
+                'qa-title': 'FAQ',
+                'qa-q1': 'Is the app free?',
+                'qa-a1': 'Basic features are free. Upgrade to Premium for advanced analysis and reminders.',
+                'qa-q2': 'What extra features does Premium provide?',
+                'qa-a2': 'Premium unlocks advanced meal analysis, water tracking and more.',
+                'qa-q3': 'Can I use the app offline?',
+                'qa-a3': 'You can record meals offline and sync when online.',
+                'qa-q4': 'How do I export my data?',
+                'qa-a4': 'Go to Settings > Export Data to download your logs.',
+                'qa-q5': 'Which languages are supported?',
+                'qa-a5': 'Chinese, English, Korean and Japanese are currently supported.',
                 'footer-support': 'Support',
                 'footer-terms': 'Terms of Use',
                 'footer-privacy': 'Privacy Policy',
@@ -446,9 +546,11 @@
                 'nav-home': '홈',
                 'nav-features': '기능',
                 'nav-showcase': '비교',
+                'nav-qanda': 'Q&A',
                 'nav-mobile-home': '홈',
                 'nav-mobile-features': '기능',
                 'nav-mobile-showcase': '비교',
+                'nav-mobile-qanda': 'Q&A',
                 'hero-title1': '식사 기록 시작',
                 'hero-title2': '식사 기록을 사랑하게 될 <span class="text-[#ECD676]">앱</span>',
                 'hero-p1': '식단을 쉽게 관리하고 매일의 열량과 영양을 추적하여 건강 목표를 더 가깝게!',
@@ -487,6 +589,17 @@
                 'row-ai-food': 'AI 음식 분석',
                 'row-ai-chart': 'AI 차트 분석',
                 'row-ai-name': 'AI 이름 분석',
+                'qa-title': '자주 묻는 질문',
+                'qa-q1': '앱은 무료인가요?',
+                'qa-a1': '기본 기능은 무료이며, 프리미엄 업그레이드 시 더 많은 분석과 알림을 제공합니다.',
+                'qa-q2': '프리미엄 기능은 무엇인가요?',
+                'qa-a2': '고급 식사 분석, 물 섭취 추적 등 추가 기능이 포함됩니다.',
+                'qa-q3': '오프라인에서도 사용할 수 있나요?',
+                'qa-a3': '오프라인에서도 기록 가능하며, 온라인 시 동기화됩니다.',
+                'qa-q4': '데이터를 어떻게 내보내나요?',
+                'qa-a4': '설정 > 데이터 내보내기에서 기록을 다운로드할 수 있습니다.',
+                'qa-q5': '어떤 언어를 지원하나요?',
+                'qa-a5': '현재 중국어, 영어, 한국어, 일본어를 지원합니다.',
                 'footer-support': '지원',
                 'footer-terms': '이용 약관',
                 'footer-privacy': '개인정보처리방침',
@@ -497,9 +610,11 @@
                 'nav-home': 'ホーム',
                 'nav-features': '機能',
                 'nav-showcase': '比較',
+                'nav-qanda': 'Q&A',
                 'nav-mobile-home': 'ホーム',
                 'nav-mobile-features': '機能',
                 'nav-mobile-showcase': '比較',
+                'nav-mobile-qanda': 'Q&A',
                 'hero-title1': '食事記録スタート',
                 'hero-title2': '食事記録が好きになる <span class="text-[#ECD676]">アプリ</span>',
                 'hero-p1': '簡単に食事を管理し、毎日のカロリーと栄養を追跡して健康目標を達成！',
@@ -538,6 +653,17 @@
                 'row-ai-food': 'AI食品分析',
                 'row-ai-chart': 'AIチャート分析',
                 'row-ai-name': 'AI名称分析',
+                'qa-title': 'よくある質問',
+                'qa-q1': 'アプリは無料ですか？',
+                'qa-a1': '基本機能は無料で利用でき、プレミアムにアップグレードすると詳細解析や通知が追加されます。',
+                'qa-q2': 'プレミアムでは何ができますか？',
+                'qa-a2': '高度な食事分析や水分追跡などの機能が利用できます。',
+                'qa-q3': 'オフラインで使えますか？',
+                'qa-a3': 'オフラインでも記録でき、オンライン時に同期されます。',
+                'qa-q4': 'データをエクスポートするには？',
+                'qa-a4': '設定 > データ出力から記録をダウンロードできます。',
+                'qa-q5': '対応している言語は？',
+                'qa-a5': '現在は中国語、英語、韓国語、日本語に対応しています。',
                 'footer-support': 'サポート',
                 'footer-terms': '利用規約',
                 'footer-privacy': 'プライバシーポリシー',
