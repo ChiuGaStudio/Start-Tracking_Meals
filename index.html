@@ -50,12 +50,12 @@
     <header class="sticky top-0 z-10 bg-white shadow-sm py-4 px-6 md:px-12 flex justify-between items-center rounded-b-xl">
         <a href="index.html" class="flex items-center space-x-2">
             <img src="assets/start_tracking_meals_with_white_bg.png" alt="Logo" class="w-8 h-8 object-contain" />
-            <div class="text-3xl md:text-4xl font-bold text-[#2D2926]">記食開始</div>
+            <div id="site-name" class="text-3xl md:text-4xl font-bold text-[#2D2926]">記食開始</div>
         </a>
         <nav class="hidden md:flex space-x-8">
-            <a href="#" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">首頁</a>
-            <a href="#features" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">功能說明</a>
-            <a href="#showcase" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">版本比較</a>
+            <a id="nav-home" href="#" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">首頁</a>
+            <a id="nav-features" href="#features" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">功能說明</a>
+            <a id="nav-showcase" href="#showcase" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">版本比較</a>
         </nav>
         <select id="lang-switcher" class="hidden md:block border border-gray-300 rounded-md text-sm px-2 py-1 ml-4">
             <option value="zh-TW">繁體中文</option>
@@ -63,7 +63,6 @@
             <option value="ko">한국어</option>
             <option value="ja">日本語</option>
         </select>
-        <div id="google_translate_element" class="hidden"></div>
         <!-- Mobile menu button (hidden on desktop) -->
        <button id="mobile-menu-button" class="md:hidden text-[#2D2926] hover:text-[#B8B0A6] focus:outline-none">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -73,9 +72,9 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md px-6 pb-4">
         <nav class="flex flex-col space-y-4">
-            <a href="#" class="text-xl py-3 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">首頁</a>
-            <a href="#features" class="text-xl py-3 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">功能說明</a>
-            <a href="#showcase" class="text-xl py-3 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">版本比較</a>
+            <a id="nav-mobile-home" href="#" class="text-xl py-3 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">首頁</a>
+            <a id="nav-mobile-features" href="#features" class="text-xl py-3 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">功能說明</a>
+            <a id="nav-mobile-showcase" href="#showcase" class="text-xl py-3 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">版本比較</a>
         </nav>
         <select id="lang-switcher-mobile" class="mt-4 border border-gray-300 rounded-md text-sm px-2 py-1">
             <option value="zh-TW">繁體中文</option>
@@ -83,23 +82,22 @@
             <option value="ko">한국어</option>
             <option value="ja">日本語</option>
         </select>
-        <div id="google_translate_element_mobile" class="hidden"></div>
     </div>
 
     <!-- Hero Section -->
     <section class="hero-gradient py-16 md:py-24 px-6 md:px-12 text-[#2D2926] flex flex-col md:flex-row items-center justify-between gap-12 rounded-b-xl">
         <!-- Hero Text Content -->
         <div class="flex-1 text-leading md:text-leading">
-            <h1 class="text-4xl md:text-5xl lg:text-8xl font-extrabold leading-tight mb-6">
+            <h1 id="hero-title1" class="text-4xl md:text-5xl lg:text-8xl font-extrabold leading-tight mb-6">
                 記食開始
             </h1>
-            <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
+            <h1 id="hero-title2" class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
                 讓你愛上 <span class="text-[#ECD676]">記錄飲食</span> 的App
             </h1>
-            <p class="text-lg md:text-xl mb-0 max-w-2xl mx-auto md:mx-0 opacity-90">
+            <p id="hero-p1" class="text-lg md:text-xl mb-0 max-w-2xl mx-auto md:mx-0 opacity-90">
                 輕鬆管理飲食、追蹤每日熱量與營養，讓健康目標不再遙不可及！
             </p>
-            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto md:mx-0 opacity-90">
+            <p id="hero-p2" class="text-lg md:text-xl mb-8 max-w-2xl mx-auto md:mx-0 opacity-90">
                 使用AI與攝影技術，快速記下你每日所吃的一切，從健康分析到喝水提醒，打造你的飲食生活習慣！
             </p>
             <div class="flex flex-col sm:flex-row justify-leading md:justify-leading gap-4">
@@ -134,82 +132,82 @@
 
      <!-- Features Section -->
     <section id="features" class="py-12 px-6 md:px-12 bg-white text-[#2D2926] scroll-mt-20">
-         <h2 class="text-2xl font-bold mb-10 text-center">主要功能</h2>
+        <h2 id="features-title" class="text-2xl font-bold mb-10 text-center">主要功能</h2>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
             <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">🍽️</div>
-                <h3 class="font-semibold mb-2">餐點管理</h3>
-                <p class="text-sm">新增、編輯與刪除餐點，內建資料庫與條碼、照片辨識自動填值。</p>
+                <h3 id="feat-meal-title" class="font-semibold mb-2">餐點管理</h3>
+                <p id="feat-meal-desc" class="text-sm">新增、編輯與刪除餐點，內建資料庫與條碼、照片辨識自動填值。</p>
             </div>
             <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">📊</div>
-                <h3 class="font-semibold mb-2">每日記食</h3>
-                <p class="text-sm">顯示每日卡路里及蛋白質(加入premium可以看到更多項目！)，並支援桌面小工具快速追蹤當日記食。</p>
+                <h3 id="feat-daily-title" class="font-semibold mb-2">每日記食</h3>
+                <p id="feat-daily-desc" class="text-sm">顯示每日卡路里及蛋白質(加入premium可以看到更多項目！)，並支援桌面小工具快速追蹤當日記食。</p>
             </div>
             <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">⚙️</div>
-                <h3 class="font-semibold mb-2">個人化設定</h3>
-                <p class="text-sm">依身高、體重和性別計算出每日的營養攝取建議值，也可自定目標，追蹤每日的達標率。</p>
+                <h3 id="feat-custom-title" class="font-semibold mb-2">個人化設定</h3>
+                <p id="feat-custom-desc" class="text-sm">依身高、體重和性別計算出每日的營養攝取建議值，也可自定目標，追蹤每日的達標率。</p>
             </div>
             <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">📅</div>
-                <h3 class="font-semibold mb-2">歷史紀錄</h3>
-                <p class="text-sm">可透過行事曆快速切換日期，瀏覽每日記食的歷史紀錄。</p>
+                <h3 id="feat-history-title" class="font-semibold mb-2">歷史紀錄</h3>
+                <p id="feat-history-desc" class="text-sm">可透過行事曆快速切換日期，瀏覽每日記食的歷史紀錄。</p>
             </div>
                <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">📈</div>
-                <h3 class="font-semibold mb-2 flex items-center justify-center gap-1">數據分析
+                <h3 id="feat-analysis-title" class="font-semibold mb-2 flex items-center justify-center gap-1">數據分析
                     <span class="text-xs font-semibold text-yellow-600 bg-yellow-200 rounded px-1">Premium</span>
                 </h3>
-                <p class="text-sm">圖表呈現攝取與運動趨勢，提供飲食建議。</p>
+                <p id="feat-analysis-desc" class="text-sm">圖表呈現攝取與運動趨勢，提供飲食建議。</p>
             </div>
               <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">💧</div>
-                 <h3 class="font-semibold mb-2 flex items-center justify-center gap-1">喝水追蹤
+                 <h3 id="feat-water-title" class="font-semibold mb-2 flex items-center justify-center gap-1">喝水追蹤
                     <span class="text-xs font-semibold text-yellow-600 bg-yellow-200 rounded px-1">Premium</span>
                 </h3>
-                <p class="text-sm">記錄每日喝水量並可以開啟個人提醒，方便且快速的讓您保持喝水的習慣。</p>
+                <p id="feat-water-desc" class="text-sm">記錄每日喝水量並可以開啟個人提醒，方便且快速的讓您保持喝水的習慣。</p>
             </div>
             <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">📂</div>
-                 <h3 class="font-semibold mb-2 flex items-center justify-center gap-1">資料匯出
+                 <h3 id="feat-export-title" class="font-semibold mb-2 flex items-center justify-center gap-1">資料匯出
                     <span class="text-xs font-semibold text-yellow-600 bg-yellow-200 rounded px-1">Premium</span>
                 </h3>
-                <p class="text-sm">所有記食紀錄可匯出成excel檔案，方便您備份或是印出與專家們訂定目標。</p>
+                <p id="feat-export-desc" class="text-sm">所有記食紀錄可匯出成excel檔案，方便您備份或是印出與專家們訂定目標。</p>
             </div>
               <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">🍪</div>
-                <h3 class="font-semibold mb-2 flex items-center justify-center gap-1">偷吃紀錄
+                <h3 id="feat-cheat-title" class="font-semibold mb-2 flex items-center justify-center gap-1">偷吃紀錄
                     <span class="text-xs font-semibold text-yellow-600 bg-yellow-200 rounded px-1">Premium</span>
                 </h3>
-                <p class="text-sm">有趣的小工具，讓您看到歷史紀錄時，可以會心一笑。</p>
+                <p id="feat-cheat-desc" class="text-sm">有趣的小工具，讓您看到歷史紀錄時，可以會心一笑。</p>
             </div>
             <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">🤖</div>
-                <h3 class="font-semibold mb-2 flex items-center justify-center gap-1">AI辨識紀錄
+                <h3 id="feat-ai-title" class="font-semibold mb-2 flex items-center justify-center gap-1">AI辨識紀錄
                     <span class="text-xs font-semibold text-yellow-600 bg-yellow-200 rounded px-1">Premium</span>
                 </h3>
-                <p class="text-sm">方便且聰明的為您辨識照片中，食物的營養成分，也支援拍攝營養標示表，並自動填入分析結果，加快您每日記食的速度。</p>
+                <p id="feat-ai-desc" class="text-sm">方便且聰明的為您辨識照片中，食物的營養成分，也支援拍攝營養標示表，並自動填入分析結果，加快您每日記食的速度。</p>
             </div>
         </div>
     </section>
 
 <!-- Showcase Section -->
     <section id="showcase" class="py-12 px-6 md:px-12 bg-gray-50 scroll-mt-20">
-        <h2 class="text-2xl font-bold mb-10 text-center text-[#2D2926]">免費與Premium</h2>
+        <h2 id="showcase-title" class="text-2xl font-bold mb-10 text-center text-[#2D2926]">免費與Premium</h2>
         <div class="max-w-3xl mx-auto overflow-x-auto">
             <table class="w-full table-auto text-center bg-white rounded-lg shadow-md">
                 <caption class="sr-only">功能比較表</caption>
                 <thead class="bg-gray-100 text-gray-700">
                     <tr>
-                        <th class="px-4 py-2">功能</th>
-                        <th class="px-4 py-2">免費版</th>
-                        <th class="px-4 py-2">Premium 版</th>
+                        <th id="table-head-feature" class="px-4 py-2">功能</th>
+                        <th id="table-head-free" class="px-4 py-2">免費版</th>
+                        <th id="table-head-premium" class="px-4 py-2">Premium 版</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200">
                     <tr class="odd:bg-white even:bg-gray-50">
-                        <td class="px-4 py-2 text-left">飲食紀錄</td>
+                        <td id="row-record" class="px-4 py-2 text-left">飲食紀錄</td>
                         <td class="px-4 py-2">
                             <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
@@ -218,7 +216,7 @@
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
-                        <td class="px-4 py-2 text-left">歷史記食查詢</td>
+                        <td id="row-history" class="px-4 py-2 text-left">歷史記食查詢</td>
                         <td class="px-4 py-2">
                             <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
@@ -227,7 +225,7 @@
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
-                        <td class="px-4 py-2 text-left">飲食目標設定</td>
+                        <td id="row-target" class="px-4 py-2 text-left">飲食目標設定</td>
                         <td class="px-4 py-2">
                             <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
@@ -236,7 +234,7 @@
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
-                        <td class="px-4 py-2 text-left">記食分析</td>
+                        <td id="row-analysis" class="px-4 py-2 text-left">記食分析</td>
                         <td class="px-4 py-2">
                             <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
@@ -245,7 +243,7 @@
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
-                        <td class="px-4 py-2 text-left">進階飲食目標設定</td>
+                        <td id="row-adv-target" class="px-4 py-2 text-left">進階飲食目標設定</td>
                         <td class="px-4 py-2">
                             <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
                         </td>
@@ -254,7 +252,7 @@
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
-                        <td class="px-4 py-2 text-left">進階記食分析</td>
+                        <td id="row-adv-analysis" class="px-4 py-2 text-left">進階記食分析</td>
                         <td class="px-4 py-2">
                             <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
                         </td>
@@ -263,7 +261,7 @@
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
-                        <td class="px-4 py-2 text-left">喝水量紀錄</td>
+                        <td id="row-water" class="px-4 py-2 text-left">喝水量紀錄</td>
                         <td class="px-4 py-2">
                             <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
                         </td>
@@ -272,7 +270,7 @@
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
-                        <td class="px-4 py-2 text-left">偷吃小點心紀錄</td>
+                        <td id="row-cheat" class="px-4 py-2 text-left">偷吃小點心紀錄</td>
                         <td class="px-4 py-2">
                             <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
                         </td>
@@ -281,7 +279,7 @@
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
-                        <td class="px-4 py-2 text-left">AI辨識記食-食物辨識分析</td>
+                        <td id="row-ai-food" class="px-4 py-2 text-left">AI辨識記食-食物辨識分析</td>
                         <td class="px-4 py-2">
                             <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
                         </td>
@@ -290,7 +288,7 @@
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
-                        <td class="px-4 py-2 text-left">AI辨識記食-圖表辨識分析</td>
+                        <td id="row-ai-chart" class="px-4 py-2 text-left">AI辨識記食-圖表辨識分析</td>
                         <td class="px-4 py-2">
                             <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
                         </td>
@@ -299,7 +297,7 @@
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
-                        <td class="px-4 py-2 text-left">AI辨識記食-名稱分析</td>
+                        <td id="row-ai-name" class="px-4 py-2 text-left">AI辨識記食-名稱分析</td>
                         <td class="px-4 py-2">
                             <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
                         </td>
@@ -316,12 +314,12 @@
     <footer class="bg-[#B8B0A6] text-[#2D2926] py-8 mt-12 rounded-t-xl px-6 md:px-12">
         <div class="flex flex-col md:flex-row md:justify-between items-center">
             <!-- 版權資訊 -->
-            <p class="order-2 md:order-1 w-full md:w-auto text-center md:text-right">&copy; 2025 記食開始. All rights reserved.</p>
+            <p id="footer-copyright" class="order-2 md:order-1 w-full md:w-auto text-center md:text-right">&copy; 2025 記食開始. All rights reserved.</p>
             <!-- 支援連結 -->
             <div class="flex justify-center space-x-4 order-1 md:order-2 w-full md:w-auto mb-2 md:mb-0">
-                <a href="supports/support.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">支援</a>
-                <a href="terms/terms.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">使用者條款</a>
-                <a href="PrivacyPolicies/PrivacyPolicies.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">隱私政策</a>
+                <a id="footer-support" href="supports/support.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">支援</a>
+                <a id="footer-terms" href="terms/terms.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">使用者條款</a>
+                <a id="footer-privacy" href="PrivacyPolicies/PrivacyPolicies.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">隱私政策</a>
             </div>
         </div>
     </footer>
@@ -340,28 +338,231 @@
         }
     </script>
     <script>
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'zh-TW',
-                includedLanguages: 'zh-TW,en,ja,ko',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-            new google.translate.TranslateElement({
-                pageLanguage: 'zh-TW',
-                includedLanguages: 'zh-TW,en,ja,ko',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element_mobile');
-        }
+        const translations = {
+            'zh-TW': {
+                'site-name': '記食開始',
+                'nav-home': '首頁',
+                'nav-features': '功能說明',
+                'nav-showcase': '版本比較',
+                'nav-mobile-home': '首頁',
+                'nav-mobile-features': '功能說明',
+                'nav-mobile-showcase': '版本比較',
+                'hero-title1': '記食開始',
+                'hero-title2': '讓你愛上 <span class="text-[#ECD676]">記錄飲食</span> 的App',
+                'hero-p1': '輕鬆管理飲食、追蹤每日熱量與營養，讓健康目標不再遙不可及！',
+                'hero-p2': '使用AI與攝影技術，快速記下你每日所吃的一切，從健康分析到喝水提醒，打造你的飲食生活習慣！',
+                'features-title': '主要功能',
+                'feat-meal-title': '餐點管理',
+                'feat-meal-desc': '新增、編輯與刪除餐點，內建資料庫與條碼、照片辨識自動填值。',
+                'feat-daily-title': '每日記食',
+                'feat-daily-desc': '顯示每日卡路里及蛋白質(加入premium可以看到更多項目！)，並支援桌面小工具快速追蹤當日記食。',
+                'feat-custom-title': '個人化設定',
+                'feat-custom-desc': '依身高、體重和性別計算出每日的營養攝取建議值，也可自定目標，追蹤每日的達標率。',
+                'feat-history-title': '歷史紀錄',
+                'feat-history-desc': '可透過行事曆快速切換日期，瀏覽每日記食的歷史紀錄。',
+                'feat-analysis-title': '數據分析',
+                'feat-analysis-desc': '圖表呈現攝取與運動趨勢，提供飲食建議。',
+                'feat-water-title': '喝水追蹤',
+                'feat-water-desc': '記錄每日喝水量並可以開啟個人提醒，方便且快速的讓您保持喝水的習慣。',
+                'feat-export-title': '資料匯出',
+                'feat-export-desc': '所有記食紀錄可匯出成excel檔案，方便您備份或是印出與專家們訂定目標。',
+                'feat-cheat-title': '偷吃紀錄',
+                'feat-cheat-desc': '有趣的小工具，讓您看到歷史紀錄時，可以會心一笑。',
+                'feat-ai-title': 'AI辨識紀錄',
+                'feat-ai-desc': '方便且聰明的為您辨識照片中，食物的營養成分，也支援拍攝營養標示表，並自動填入分析結果，加快您每日記食的速度。',
+                'showcase-title': '免費與Premium',
+                'table-head-feature': '功能',
+                'table-head-free': '免費版',
+                'table-head-premium': 'Premium 版',
+                'row-record': '飲食紀錄',
+                'row-history': '歷史記食查詢',
+                'row-target': '飲食目標設定',
+                'row-analysis': '記食分析',
+                'row-adv-target': '進階飲食目標設定',
+                'row-adv-analysis': '進階記食分析',
+                'row-water': '喝水量紀錄',
+                'row-cheat': '偷吃小點心紀錄',
+                'row-ai-food': 'AI辨識記食-食物辨識分析',
+                'row-ai-chart': 'AI辨識記食-圖表辨識分析',
+                'row-ai-name': 'AI辨識記食-名稱分析',
+                'footer-support': '支援',
+                'footer-terms': '使用者條款',
+                'footer-privacy': '隱私政策',
+                'footer-copyright': '&copy; 2025 記食開始. All rights reserved.'
+            },
+            'en': {
+                'site-name': 'Start Tracking Meals',
+                'nav-home': 'Home',
+                'nav-features': 'Features',
+                'nav-showcase': 'Comparison',
+                'nav-mobile-home': 'Home',
+                'nav-mobile-features': 'Features',
+                'nav-mobile-showcase': 'Comparison',
+                'hero-title1': 'Start Tracking Meals',
+                'hero-title2': 'The app that makes you love <span class="text-[#ECD676]">tracking meals</span>',
+                'hero-p1': 'Easily manage meals and track daily calories and nutrition so your goals are within reach!',
+                'hero-p2': 'Using AI and photography, quickly log everything you eat. From health analysis to water reminders, build healthy habits!',
+                'features-title': 'Key Features',
+                'feat-meal-title': 'Meal Management',
+                'feat-meal-desc': 'Add, edit and delete meals with a built-in database and barcode/photo recognition.',
+                'feat-daily-title': 'Daily Logs',
+                'feat-daily-desc': 'Shows daily calories and protein (more items with premium) and widgets for quick tracking.',
+                'feat-custom-title': 'Personal Settings',
+                'feat-custom-desc': 'Calculate suggested intake by height, weight and gender or set your own goals.',
+                'feat-history-title': 'History',
+                'feat-history-desc': 'Switch dates via calendar to view past logs.',
+                'feat-analysis-title': 'Analytics',
+                'feat-analysis-desc': 'Charts display intake and exercise trends with diet advice.',
+                'feat-water-title': 'Water Tracking',
+                'feat-water-desc': 'Record daily water intake and set reminders to keep the habit.',
+                'feat-export-title': 'Export Data',
+                'feat-export-desc': 'Export all logs to Excel for backup or consultation.',
+                'feat-cheat-title': 'Cheat Log',
+                'feat-cheat-desc': 'A fun tool so you can smile when reviewing history.',
+                'feat-ai-title': 'AI Recognition',
+                'feat-ai-desc': 'Smartly recognize nutrition from photos and labels, auto-filling results to speed up logging.',
+                'showcase-title': 'Free vs Premium',
+                'table-head-feature': 'Feature',
+                'table-head-free': 'Free',
+                'table-head-premium': 'Premium',
+                'row-record': 'Meal Logging',
+                'row-history': 'History Lookup',
+                'row-target': 'Goal Setting',
+                'row-analysis': 'Analysis',
+                'row-adv-target': 'Advanced Goal Setting',
+                'row-adv-analysis': 'Advanced Analysis',
+                'row-water': 'Water Tracking',
+                'row-cheat': 'Snack Log',
+                'row-ai-food': 'AI Food Analysis',
+                'row-ai-chart': 'AI Chart Analysis',
+                'row-ai-name': 'AI Name Analysis',
+                'footer-support': 'Support',
+                'footer-terms': 'Terms of Use',
+                'footer-privacy': 'Privacy Policy',
+                'footer-copyright': '&copy; 2025 Start Tracking Meals. All rights reserved.'
+            },
+            'ko': {
+                'site-name': '식사 기록 시작',
+                'nav-home': '홈',
+                'nav-features': '기능',
+                'nav-showcase': '비교',
+                'nav-mobile-home': '홈',
+                'nav-mobile-features': '기능',
+                'nav-mobile-showcase': '비교',
+                'hero-title1': '식사 기록 시작',
+                'hero-title2': '식사 기록을 사랑하게 될 <span class="text-[#ECD676]">앱</span>',
+                'hero-p1': '식단을 쉽게 관리하고 매일의 열량과 영양을 추적하여 건강 목표를 더 가깝게!',
+                'hero-p2': 'AI와 촬영 기술로 매일 먹는 모든 것을 빠르게 기록하고 건강 분석과 물 알림까지 제공합니다.',
+                'features-title': '주요 기능',
+                'feat-meal-title': '식단 관리',
+                'feat-meal-desc': '내장 DB와 바코드·사진 인식으로 식단을 추가·편집·삭제합니다.',
+                'feat-daily-title': '일일 기록',
+                'feat-daily-desc': '하루 칼로리와 단백질(프리미엄은 더 많은 항목) 표시, 위젯 지원.',
+                'feat-custom-title': '개인 설정',
+                'feat-custom-desc': '키, 체중, 성별로 권장 섭취량을 계산하거나 목표를 설정합니다.',
+                'feat-history-title': '기록 역사',
+                'feat-history-desc': '캘린더로 날짜를 바꿔 과거 기록을 확인합니다.',
+                'feat-analysis-title': '데이터 분석',
+                'feat-analysis-desc': '차트로 섭취와 운동 추세를 보여주고 조언을 제공합니다.',
+                'feat-water-title': '물 섭취 추적',
+                'feat-water-desc': '매일 물 섭취량을 기록하고 알림으로 습관을 유지하세요.',
+                'feat-export-title': '데이터 내보내기',
+                'feat-export-desc': '모든 기록을 Excel로 내보내 백업하거나 상담에 활용합니다.',
+                'feat-cheat-title': '간식 기록',
+                'feat-cheat-desc': '지난 기록을 보며 미소 지을 수 있는 재미있는 기능.',
+                'feat-ai-title': 'AI 인식 기록',
+                'feat-ai-desc': '사진 속 음식과 라벨을 인식하여 결과를 자동 입력합니다.',
+                'showcase-title': '무료 vs 프리미엄',
+                'table-head-feature': '기능',
+                'table-head-free': '무료',
+                'table-head-premium': '프리미엄',
+                'row-record': '식사 기록',
+                'row-history': '기록 조회',
+                'row-target': '목표 설정',
+                'row-analysis': '기록 분석',
+                'row-adv-target': '고급 목표 설정',
+                'row-adv-analysis': '고급 분석',
+                'row-water': '물 섭취 기록',
+                'row-cheat': '간식 기록',
+                'row-ai-food': 'AI 음식 분석',
+                'row-ai-chart': 'AI 차트 분석',
+                'row-ai-name': 'AI 이름 분석',
+                'footer-support': '지원',
+                'footer-terms': '이용 약관',
+                'footer-privacy': '개인정보처리방침',
+                'footer-copyright': '&copy; 2025 식사 기록 시작. All rights reserved.'
+            },
+            'ja': {
+                'site-name': '食事記録スタート',
+                'nav-home': 'ホーム',
+                'nav-features': '機能',
+                'nav-showcase': '比較',
+                'nav-mobile-home': 'ホーム',
+                'nav-mobile-features': '機能',
+                'nav-mobile-showcase': '比較',
+                'hero-title1': '食事記録スタート',
+                'hero-title2': '食事記録が好きになる <span class="text-[#ECD676]">アプリ</span>',
+                'hero-p1': '簡単に食事を管理し、毎日のカロリーと栄養を追跡して健康目標を達成！',
+                'hero-p2': 'AIと撮影技術で毎日の食事を素早く記録し、健康分析や水分リマインダーまで行います。',
+                'features-title': '主な機能',
+                'feat-meal-title': '食事管理',
+                'feat-meal-desc': '内蔵データベースとバーコード・写真認識で食事を追加・編集・削除。',
+                'feat-daily-title': '日次記録',
+                'feat-daily-desc': '一日のカロリーとタンパク質を表示し(プレミアムで項目追加)、ウィジェットで素早く追跡。',
+                'feat-custom-title': '個人設定',
+                'feat-custom-desc': '身長・体重・性別から推奨摂取量を計算し、目標設定も可能。',
+                'feat-history-title': '履歴',
+                'feat-history-desc': 'カレンダーから日付を切り替え、過去の記録を閲覧。',
+                'feat-analysis-title': 'データ分析',
+                'feat-analysis-desc': 'グラフで摂取と運動の傾向を表示し、食事アドバイスを提供。',
+                'feat-water-title': '水分追跡',
+                'feat-water-desc': '毎日の水分量を記録し、リマインダーで習慣化。',
+                'feat-export-title': 'データ出力',
+                'feat-export-desc': 'すべての記録をExcelへ出力し、バックアップや専門家との共有に。',
+                'feat-cheat-title': 'おやつ記録',
+                'feat-cheat-desc': '履歴を見るとき思わず笑顔になる楽しい機能。',
+                'feat-ai-title': 'AI認識記録',
+                'feat-ai-desc': '写真から食品やラベルを認識し、自動で結果を入力して記録を高速化。',
+                'showcase-title': '無料版とプレミアム版',
+                'table-head-feature': '機能',
+                'table-head-free': '無料',
+                'table-head-premium': 'プレミアム',
+                'row-record': '食事記録',
+                'row-history': '履歴検索',
+                'row-target': '目標設定',
+                'row-analysis': '分析',
+                'row-adv-target': '高度な目標設定',
+                'row-adv-analysis': '高度な分析',
+                'row-water': '水分記録',
+                'row-cheat': 'おやつ記録',
+                'row-ai-food': 'AI食品分析',
+                'row-ai-chart': 'AIチャート分析',
+                'row-ai-name': 'AI名称分析',
+                'footer-support': 'サポート',
+                'footer-terms': '利用規約',
+                'footer-privacy': 'プライバシーポリシー',
+                'footer-copyright': '&copy; 2025 食事記録スタート. All rights reserved.'
+            }
+        };
 
         function getCurrentLang() {
-            const match = document.cookie.match(/googtrans=\/auto\/([^;]+)/);
-            return match ? match[1] : 'zh-TW';
+            return localStorage.getItem('lang') || 'zh-TW';
+        }
+
+        function applyTranslations(lang) {
+            const data = translations[lang] || translations['zh-TW'];
+            Object.keys(data).forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.innerHTML = data[id];
+                }
+            });
+            document.documentElement.lang = lang;
         }
 
         function setLang(lang) {
-            const value = '/auto/' + lang;
-            document.cookie = 'googtrans=' + value + '; path=/';
-            document.cookie = 'googtrans=' + value + '; path=/; domain=' + window.location.hostname;
+            localStorage.setItem('lang', lang);
+            applyTranslations(lang);
         }
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -370,16 +571,15 @@
             const current = getCurrentLang();
             if (desktop) desktop.value = current;
             if (mobile) mobile.value = current;
+            applyTranslations(current);
             [desktop, mobile].forEach(sel => {
                 if (sel) {
                     sel.addEventListener('change', () => {
                         setLang(sel.value);
-                        location.reload();
                     });
                 }
             });
         });
     </script>
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
