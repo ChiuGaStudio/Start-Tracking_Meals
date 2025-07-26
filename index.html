@@ -45,9 +45,9 @@
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased pt-20">
     <!-- Header Section -->
-    <header class="sticky top-0 z-10 bg-white shadow-sm py-4 px-6 md:px-12 flex justify-between items-center rounded-b-xl">
+    <header class="fixed top-0 left-0 right-0 z-10 bg-white shadow-sm py-4 px-6 md:px-12 flex justify-between items-center rounded-b-xl">
         <a href="index.html" class="flex items-center space-x-2">
             <img src="assets/start_tracking_meals_with_white_bg.png" alt="Logo" class="w-10 h-10 object-contain" />
             <div class="text-xl md:text-2xl font-bold text-[#2D2926]">記食開始</div>
@@ -71,7 +71,7 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md px-6 pb-4">
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md px-6 pb-4 fixed top-20 left-0 right-0 z-20">
         <nav class="flex flex-col space-y-4">
             <a id="nav-mobile-home" href="#" class="text-xl py-3 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">首頁</a>
             <a id="nav-mobile-features" href="#features" class="text-xl py-3 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">功能說明</a>
