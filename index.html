@@ -58,12 +58,19 @@
             <a id="nav-showcase" href="#showcase" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">版本比較</a>
             <a id="nav-qanda" href="#qanda" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">常見問題</a>
         </nav>
-        <select id="lang-switcher" class="rounded-lg text-sm px-2 py-1 mr-2">
-            <option value="zh-TW">繁體中文</option>
-            <option value="en">English</option>
-            <option value="ko">한국어</option>
-            <option value="ja">日本語</option>
-        </select>
+        <div id="lang-switcher" class="relative mr-2">
+            <button class="lang-toggle flex items-center text-sm bg-transparent focus:outline-none">
+                <span class="lang-flag mr-1">🇹🇼</span>
+                <span class="lang-code">中</span>
+                <span class="ml-1">▼</span>
+            </button>
+            <ul class="lang-menu hidden absolute right-0 mt-1 bg-white border border-gray-200 rounded text-sm">
+                <li data-lang="zh-TW" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇹🇼</span>繁體中文</li>
+                <li data-lang="en" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇬🇧</span>English</li>
+                <li data-lang="ko" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇰🇷</span>한국어</li>
+                <li data-lang="ja" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇯🇵</span>日本語</li>
+            </ul>
+        </div>
         <!-- Mobile menu button (hidden on desktop) -->
        <button id="mobile-menu-button" class="md:hidden text-[#2D2926] hover:text-[#B8B0A6] focus:outline-none">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -78,6 +85,21 @@
             <a id="nav-mobile-showcase" href="#showcase" class="text-xl py-4 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">版本比較</a>
             <a id="nav-mobile-qanda" href="#qanda" class="text-xl py-4 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">常見問題</a>
         </nav>
+        <div class="flex justify-end pt-4">
+            <div id="lang-switcher-mobile" class="relative">
+                <button class="lang-toggle flex items-center text-sm bg-transparent focus:outline-none">
+                    <span class="lang-flag mr-1">🇹🇼</span>
+                    <span class="lang-code">中</span>
+                    <span class="ml-1">▼</span>
+                </button>
+                <ul class="lang-menu hidden absolute right-0 mt-1 bg-white border border-gray-200 rounded text-sm">
+                    <li data-lang="zh-TW" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇹🇼</span>繁體中文</li>
+                    <li data-lang="en" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇬🇧</span>English</li>
+                    <li data-lang="ko" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇰🇷</span>한국어</li>
+                    <li data-lang="ja" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇯🇵</span>日本語</li>
+                </ul>
+            </div>
+        </div>
         
     </div>
 
@@ -704,18 +726,43 @@
             applyTranslations(lang);
         }
 
+        const langInfo = {
+            'zh-TW': { flag: '🇹🇼', code: '中', name: '繁體中文' },
+            'en':    { flag: '🇬🇧', code: 'EN', name: 'English' },
+            'ko':    { flag: '🇰🇷', code: 'KO', name: '한국어' },
+            'ja':    { flag: '🇯🇵', code: 'JA', name: '日本語' }
+        };
+
+        function initLangSwitcher(id) {
+            const root = document.getElementById(id);
+            if (!root) return;
+            const toggle = root.querySelector('.lang-toggle');
+            const menu = root.querySelector('.lang-menu');
+            const flag = root.querySelector('.lang-flag');
+            const code = root.querySelector('.lang-code');
+            toggle.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+            menu.querySelectorAll('li').forEach(li => {
+                li.addEventListener('click', () => {
+                    const lang = li.dataset.lang;
+                    setLang(lang);
+                    flag.textContent = langInfo[lang].flag;
+                    code.textContent = langInfo[lang].code;
+                    menu.classList.add('hidden');
+                });
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
-            const desktop = document.getElementById('lang-switcher');
-            const mobile = document.getElementById('lang-switcher-mobile');
             const current = getCurrentLang();
-            if (desktop) desktop.value = current;
-            if (mobile) mobile.value = current;
             applyTranslations(current);
-            [desktop, mobile].forEach(sel => {
-                if (sel) {
-                    sel.addEventListener('change', () => {
-                        setLang(sel.value);
-                    });
+            ['lang-switcher', 'lang-switcher-mobile'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.querySelector('.lang-flag').textContent = langInfo[current].flag;
+                    el.querySelector('.lang-code').textContent = langInfo[current].code;
+                    initLangSwitcher(id);
                 }
             });
         });
