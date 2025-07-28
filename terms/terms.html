@@ -45,12 +45,19 @@
         <nav class="hidden md:flex space-x-8 items-center">
             <a href="../index.html" class="text-primary-dark hover:text-accent font-medium transition-colors duration-200">首頁</a>
         </nav>
-        <select id="lang-switcher" class="border border-gray-300 rounded-md text-sm px-2 py-1 ml-4 mr-2">
-            <option value="zh-TW">繁體中文</option>
-            <option value="en">English</option>
-            <option value="ko">한국어</option>
-            <option value="ja">日本語</option>
-        </select>
+        <div id="lang-switcher" class="relative ml-4 mr-2">
+            <button class="lang-toggle flex items-center text-sm bg-transparent focus:outline-none">
+                <span class="lang-flag mr-1">🇹🇼</span>
+                <span class="lang-code">中文</span>
+                <span class="ml-1">▼</span>
+            </button>
+            <ul class="lang-menu hidden absolute right-0 mt-1 bg-white border border-gray-200 rounded text-sm w-40">
+                <li data-lang="zh-TW" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇹🇼</span>繁體中文</li>
+                <li data-lang="en" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇺🇸</span>English</li>
+                <li data-lang="ko" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇰🇷</span>한국어</li>
+                <li data-lang="ja" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇯🇵</span>日本語</li>
+            </ul>
+        </div>
         <div id="google_translate_element" class="hidden"></div>
         <!-- Mobile menu button (hidden on desktop) -->
           <button id="mobile-menu-button" class="md:hidden text-primary-dark hover:text-accent focus:outline-none">
@@ -265,18 +272,43 @@
             document.cookie = 'googtrans=' + value + '; path=/; domain=' + window.location.hostname;
         }
 
+        const langInfo = {
+            'zh-TW': { flag: '🇹🇼', code: '中文' },
+            'en':    { flag: '🇺🇸', code: 'EN' },
+            'ko':    { flag: '🇰🇷', code: 'KO' },
+            'ja':    { flag: '🇯🇵', code: 'JA' }
+        };
+
+        function initLangSwitcher(id) {
+            const root = document.getElementById(id);
+            if (!root) return;
+            const toggle = root.querySelector('.lang-toggle');
+            const menu = root.querySelector('.lang-menu');
+            const flag = root.querySelector('.lang-flag');
+            const code = root.querySelector('.lang-code');
+            toggle.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+            menu.querySelectorAll('li').forEach(li => {
+                li.addEventListener('click', () => {
+                    const lang = li.dataset.lang;
+                    setLang(lang);
+                    flag.textContent = langInfo[lang].flag;
+                    code.textContent = langInfo[lang].code;
+                    menu.classList.add('hidden');
+                    location.reload();
+                });
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
-            const desktop = document.getElementById('lang-switcher');
-            const mobile = document.getElementById('lang-switcher-mobile');
             const current = getCurrentLang();
-            if (desktop) desktop.value = current;
-            if (mobile) mobile.value = current;
-            [desktop, mobile].forEach(sel => {
-                if (sel) {
-                    sel.addEventListener('change', () => {
-                        setLang(sel.value);
-                        location.reload();
-                    });
+            ['lang-switcher', 'lang-switcher-mobile'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.querySelector('.lang-flag').textContent = langInfo[current].flag;
+                    el.querySelector('.lang-code').textContent = langInfo[current].code;
+                    initLangSwitcher(id);
                 }
             });
         });
