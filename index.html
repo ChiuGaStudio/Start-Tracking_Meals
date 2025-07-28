@@ -31,6 +31,7 @@
         /* 手機框架樣式 */
         .phone-frame {
             @apply relative bg-gray-900 rounded-[4.5rem] p-2 shadow-2xl;
+            transform: scale(1.1);
             width: 240px; /* Adjust as needed - Increased from 200px */
             height: 480px; /* Adjust as needed - Increased from 400px */
         }
@@ -42,6 +43,12 @@
         }
                 html {
             scroll-behavior: smooth;
+        }
+        :root {
+        --brand-gray: #B8B0A6;
+        }
+        .brand-gray {
+        background-color: var(--brand-gray);
         }
     </style>
 </head>
@@ -58,15 +65,15 @@
             <a id="nav-showcase" href="#showcase" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">版本比較</a>
             <a id="nav-qanda" href="#qanda" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">常見問題</a>
         </nav>
-        <div id="lang-switcher" class="relative mr-2">
+        <div id="lang-switcher" class="relative mr-2 ml-9">
             <button class="lang-toggle flex items-center text-sm bg-transparent focus:outline-none">
                 <span class="lang-flag mr-1">🇹🇼</span>
-                <span class="lang-code">中</span>
+                <span class="lang-code">中文</span>
                 <span class="ml-1">▼</span>
             </button>
-            <ul class="lang-menu hidden absolute right-0 mt-1 bg-white border border-gray-200 rounded text-sm">
+            <ul class="lang-menu hidden absolute right-0 mt-1 bg-white border border-gray-200 rounded text-sm w-40">
                 <li data-lang="zh-TW" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇹🇼</span>繁體中文</li>
-                <li data-lang="en" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇬🇧</span>English</li>
+                <li data-lang="en" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇺🇸</span>English</li>
                 <li data-lang="ko" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇰🇷</span>한국어</li>
                 <li data-lang="ja" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇯🇵</span>日本語</li>
             </ul>
@@ -84,39 +91,27 @@
             <a id="nav-mobile-features" href="#features" class="text-xl py-4 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">功能說明</a>
             <a id="nav-mobile-showcase" href="#showcase" class="text-xl py-4 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">版本比較</a>
             <a id="nav-mobile-qanda" href="#qanda" class="text-xl py-4 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">常見問題</a>
-        </nav>
-        <div class="flex justify-end pt-4">
-            <div id="lang-switcher-mobile" class="relative">
-                <button class="lang-toggle flex items-center text-sm bg-transparent focus:outline-none">
-                    <span class="lang-flag mr-1">🇹🇼</span>
-                    <span class="lang-code">中</span>
-                    <span class="ml-1">▼</span>
-                </button>
-                <ul class="lang-menu hidden absolute right-0 mt-1 bg-white border border-gray-200 rounded text-sm">
-                    <li data-lang="zh-TW" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇹🇼</span>繁體中文</li>
-                    <li data-lang="en" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇬🇧</span>English</li>
-                    <li data-lang="ko" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇰🇷</span>한국어</li>
-                    <li data-lang="ja" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇯🇵</span>日本語</li>
-                </ul>
-            </div>
-        </div>
-        
+        </nav>        
     </div>
 
     <!-- Hero Section -->
     <section class="hero-gradient py-16 md:py-24 px-6 md:px-12 text-[#2D2926] flex flex-col md:flex-row items-center justify-between gap-12 rounded-b-xl">
         <!-- Hero Text Content -->
         <div class="flex-1 text-leading md:text-leading">
-            <h1 id="hero-title1" class="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-6">
+            <h1 id="hero-title1" class="text-6xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-6">
                 記食開始
             </h1>
-            <h1 id="hero-title2" class="text-1xl md:text-2xl lg:text-3xl font-extrabold leading-tight mb-6">
-                讓你愛上 <span class="text-[#ECD676]"><span class="text-base md:text-2xl lg:text-3xl">記</span>錄飲<span class="text-base md:text-2xl lg:text-3xl">食</span></span> 的App
+            <h1 id="hero-title2" class="text-1xl md:text-4xl lg:text-3xl font-extrabold leading-tight mb-6">
+              讓你愛上 <span class="text-[#B8B0A6]">記</span>錄飲<span class="text-[#B8B0A6]">食</span> 的App
             </h1>
-            <p id="hero-p1" class="text-base md:text-lg mb-0 max-w-2xl mx-auto md:mx-0 opacity-70">
+            <!--  <p id="hero-p1" class="text-base md:text-lg mb-0 max-w-2xl mx-auto md:mx-0 opacity-70">
+                AI 飲食助手：輕鬆追蹤熱量與營養，實現健康目標！
+            </p> -->
+            <p id="hero-p1" class="text-sm md:text-lg mb-0 max-w-2xl mx-auto md:mx-0 opacity-70">
                 AI 飲食助手：輕鬆追蹤熱量與營養，實現健康目標！
             </p>
-            <p id="hero-p2" class="text-base md:text-lg mb-8 max-w-2xl mx-auto md:mx-0 opacity-70">
+
+            <p id="hero-p2" class="text-sm md:text-lg mb-8 max-w-2xl mx-auto md:mx-0 opacity-70">
                 透過 AI 影像辨識，快速記錄飲食，並提供健康分析與喝水提醒，全面管理你的飲食習慣。
             </p>
             <div class="flex flex-col sm:flex-row justify-leading md:justify-leading gap-4">
@@ -217,7 +212,7 @@
         <div class="max-w-3xl mx-auto overflow-x-auto">
             <table class="w-full table-auto text-center bg-white rounded-lg overflow-hidden shadow-md">
                 <caption class="sr-only">功能比較表</caption>
-                <thead class="bg-gray-100 text-gray-700">
+                <thead class="brand-gray text-gray-900">
                     <tr>
                         <th id="table-head-feature" class="px-4 py-2">功能</th>
                         <th id="table-head-free" class="px-4 py-2">免費版</th>
@@ -334,7 +329,7 @@
         <h2 id="qa-title" class="text-2xl font-bold mb-10 text-center">常見問題</h2>
         <div id="qa-list" class="max-w-3xl mx-auto space-y-4">
             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button type="button" data-answer="qa-a1" class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
+                <button type="button" data-answer="qa-a1" class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-[#B8B0A6]">
                     <span id="qa-q1" class="text-black text-base font-medium text-left">記食開始App需要付費嗎？</span>
                     <span class="ml-2">+</span>
                 </button>
@@ -343,7 +338,7 @@
                 </div>
             </div>
             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button type="button" data-answer="qa-a2" class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
+                <button type="button" data-answer="qa-a2" class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-[#B8B0A6]">
                     <span id="qa-q2" class="text-black text-base font-medium text-left">Premium 版有哪些額外功能？</span>
                     <span class="ml-2">+</span>
                 </button>
@@ -352,7 +347,7 @@
                 </div>
             </div>
             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button type="button" data-answer="qa-a3" class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
+                <button type="button" data-answer="qa-a3" class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-[#B8B0A6]">
                     <span id="qa-q3" class="text-black text-base font-medium text-left">離線時可以使用嗎？</span>
                     <span class="ml-2">+</span>
                 </button>
@@ -361,7 +356,7 @@
                 </div>
             </div>
             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button type="button" data-answer="qa-a4" class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
+                <button type="button" data-answer="qa-a4" class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-[#B8B0A6]">
                     <span id="qa-q4" class="text-black text-base font-medium text-left">如何匯出我的記食資料？</span>
                     <span class="ml-2">+</span>
                 </button>
@@ -370,7 +365,7 @@
                 </div>
             </div>
             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button type="button" data-answer="qa-a5" class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
+                <button type="button" data-answer="qa-a5" class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-[#B8B0A6]">
                     <span id="qa-q5" class="text-black text-base font-medium text-left">目前支援哪些語言？</span>
                     <span class="ml-2">+</span>
                 </button>
@@ -459,7 +454,7 @@
                 'nav-mobile-showcase': '版本比較',
                 'nav-mobile-qanda': '常見問題',
                 'hero-title1': '記食開始',
-                'hero-title2': '讓你愛上 <span class="text-[#ECD676]"><span class="text-base md:text-2xl lg:text-3xl">記</span>錄飲<span class="text-base md:text-2xl lg:text-3xl">食</span></span> 的App',
+                'hero-title2': '<span class="text-base md:text-lg">讓你愛上 </span><span class="text-[#B8B0A6] text-base md:text-2xl lg:text-3xl">記</span><span class="text-base md:text-lg"> 錄飲 </span><span class="text-[#B8B0A6] text-base md:text-2xl lg:text-3xl">食</span><span class="text-base md:text-lg"> 的App</span>',
                 'hero-p1': 'AI 飲食助手：輕鬆追蹤熱量與營養，實現健康目標！',
                 'hero-p2': '透過 AI 影像辨識，快速記錄飲食，並提供健康分析與喝水提醒，全面管理你的飲食習慣。',
                 'features-title': '主要功能',
@@ -523,7 +518,7 @@
                 'nav-mobile-showcase': 'Comparison',
                 'nav-mobile-qanda': 'Q&A',
                 'hero-title1': 'Start Tracking Meals',
-                'hero-title2': 'The app that makes you love <span class="text-[#ECD676]">tracking meals</span>',
+                'hero-title2': '<span class="text-base md:text-lg">The app that makes you love </span><span class="text-[#B8B0A6] text-base md:text-2xl lg:text-3xl">tracking meals</span>',
                 'hero-p1': 'AI Diet Assistant: Easily track calories and nutrition to reach your health goals!',
                 'hero-p2': 'With AI image recognition, quickly record meals and get health analysis and water reminders to manage your diet completely.',
                 'features-title': 'Key Features',
@@ -581,13 +576,13 @@
                 'nav-home': '홈',
                 'nav-features': '기능',
                 'nav-showcase': '비교',
-                'nav-qanda': 'Q&A',
+                'nav-qanda': '질문과 답변',
                 'nav-mobile-home': '홈',
                 'nav-mobile-features': '기능',
                 'nav-mobile-showcase': '비교',
-                'nav-mobile-qanda': 'Q&A',
+                'nav-mobile-qanda': '질문과 답변',
                 'hero-title1': '식사 기록 시작',
-                'hero-title2': '식사 기록을 사랑하게 될 <span class="text-[#ECD676]">앱</span>',
+                'hero-title2': '<span class="text-base md:text-lg">사랑하게 될 </span><span class="text-[#B8B0A6] text-base md:text-2xl lg:text-3xl">식사 기록</span><span class="text-base md:text-lg"> 앱</span>',
                 'hero-p1': 'AI 식단 도우미: 칼로리와 영양을 손쉽게 추적해 건강 목표를 달성하세요!',
                 'hero-p2': 'AI 이미지 인식으로 식사를 빠르게 기록하고 건강 분석과 물 알림을 제공해 식습관을 완벽히 관리합니다.',
                 'features-title': '주요 기능',
@@ -645,13 +640,13 @@
                 'nav-home': 'ホーム',
                 'nav-features': '機能',
                 'nav-showcase': '比較',
-                'nav-qanda': 'Q&A',
+                'nav-qanda': '質問と回答',
                 'nav-mobile-home': 'ホーム',
                 'nav-mobile-features': '機能',
                 'nav-mobile-showcase': '比較',
-                'nav-mobile-qanda': 'Q&A',
+                'nav-mobile-qanda': '質問と回答',
                 'hero-title1': '食事記録スタート',
-                'hero-title2': '食事記録が好きになる <span class="text-[#ECD676]">アプリ</span>',
+                'hero-title2': '<span class="text-[#B8B0A6] text-base md:text-2xl lg:text-3xl">食事記録</span><span class="text-base md:text-lg">が好きになるアプリ</span>',
                 'hero-p1': 'AI食事アシスタント：カロリーと栄養を簡単に追跡し、健康目標を達成！',
                 'hero-p2': 'AI画像認識で食事を素早く記録し、健康分析と水分リマインダーも提供して食習慣を徹底管理します。',
                 'features-title': '主な機能',
@@ -727,8 +722,8 @@
         }
 
         const langInfo = {
-            'zh-TW': { flag: '🇹🇼', code: '中', name: '繁體中文' },
-            'en':    { flag: '🇬🇧', code: 'EN', name: 'English' },
+            'zh-TW': { flag: '🇹🇼', code: '中文', name: '繁體中文' },
+            'en':    { flag: '🇺🇸', code: 'EN', name: 'English' },
             'ko':    { flag: '🇰🇷', code: 'KO', name: '한국어' },
             'ja':    { flag: '🇯🇵', code: 'JA', name: '日本語' }
         };
