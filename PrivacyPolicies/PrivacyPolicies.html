@@ -113,49 +113,53 @@
     <!-- Main Content Container - Styled like a card -->
     <div class="max-w-4xl mx-auto p-6 md:p-10 bg-white rounded-xl shadow-lg mt-8 mb-12">
         <!-- Main Title -->
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 text-center text-primary-dark">
+        <h1 id="privacy-title"
+            class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 text-center text-primary-dark">
             隱私權政策</h1>
-        <p class="text-sm text-right mb-4">最近更新日期：2026.1.22</p>
+        <p id="privacy-date" class="text-sm text-right mb-4">最近更新日期：2026.1.22</p>
 
         <!-- Section 1 -->
         <div class="pb-6 border-b-2 border-gray-200 mb-6">
-            <p class="text-base mb-3">
+            <p id="privacy-p1" class="text-base mb-3">
                 本隱私權政策（以下簡稱「本政策」）說明您在使用「記食開始」（以下簡稱「本 App」）時，我們如何收集、使用及保護您的資訊。請您在使用本 App 前，仔細閱讀並瞭解下列內容。
             </p>
-            <p class="text-base mb-3">
+            <p id="privacy-p2" class="text-base mb-3">
                 當您下載、安裝或使用本 App，即表示您已閱讀、瞭解並同意本政策之所有條款。
             </p>
         </div>
 
         <!-- Section 2 -->
         <div class="pb-6 border-b-2 border-gray-200 mb-6">
-            <h2 class="text-2xl font-bold mb-4 text-primary-dark">一、資料的收集與使用</h2>
+            <h2 id="privacy-sec-1-title" class="text-2xl font-bold mb-4 text-primary-dark">一、資料的收集與使用</h2>
             <ol class="policy-list">
-                <li><strong>本地資料</strong>：您於本 App 中輸入的餐點、喝水、體重及運動等紀錄皆儲存在您自己的裝置上。我們不會將這些個人資料上傳至任何伺服器。</li>
-                <li><strong>相機與照片</strong>：若您啟用拍照或條碼掃描功能，本 App 需要取得相機權限。所拍攝的影像僅用於辨識食物或營養標示，不會儲存或傳送至除 Google Gemini API
+                <li id="privacy-sec-1-li1"><strong>本地資料</strong>：您於本 App
+                    中輸入的餐點、喝水、體重及運動等紀錄皆儲存在您自己的裝置上。我們不會將這些個人資料上傳至任何伺服器。</li>
+                <li id="privacy-sec-1-li2"><strong>相機與照片</strong>：若您啟用拍照或條碼掃描功能，本 App
+                    需要取得相機權限。所拍攝的影像僅用於辨識食物或營養標示，不會儲存或傳送至除 Google Gemini API
                     之外的第三方服務。</li>
-                <li><strong>Google Gemini API</strong>：為提供食物與營養資訊分析，本 App 會在您選擇使用相關功能時，將照片或查詢內容傳送至 Google Gemini
+                <li id="privacy-sec-1-li3"><strong>Google Gemini API</strong>：為提供食物與營養資訊分析，本 App
+                    會在您選擇使用相關功能時，將照片或查詢內容傳送至 Google Gemini
                     API。<u>傳送之資料僅包含當次分析所需的圖片內容，不包含任何個人識別資訊</u>，並依 Google 之隱私政策處理。依我們所知，Google
                     並不會使用該資料訓練模型或進行個人化分析。我們亦不會儲存或另行利用此等資料。</li>
-                <li><strong>使用統計</strong>：本 App 目前未內建任何行為追蹤或分析工具，也不會向我們或第三方回傳使用紀錄。</li>
-                <li><strong>應用內購買</strong>：若您透過 App Store 購買付費功能，交易與付款流程均由 Apple
+                <li id="privacy-sec-1-li4"><strong>使用統計</strong>：本 App 目前未內建任何行為追蹤或分析工具，也不會向我們或第三方回傳使用紀錄。</li>
+                <li id="privacy-sec-1-li5"><strong>應用內購買</strong>：若您透過 App Store 購買付費功能，交易與付款流程均由 Apple
                     處理。我們僅獲得購買狀態以啟用相應功能，不會收到您的付款資訊。若您訂閱月付或年付方案，可於 Apple ID 帳戶設定中取消續訂。</li>
             </ol>
         </div>
 
         <!-- Section 3 -->
         <div class="pb-6 border-b-2 border-gray-200 mb-6">
-            <h2 class="text-2xl font-bold mb-4 text-primary-dark">二、資料分享與第三方服務</h2>
+            <h2 id="privacy-sec-2-title" class="text-2xl font-bold mb-4 text-primary-dark">二、資料分享與第三方服務</h2>
             <ul class="policy-list">
-                <li>除非經您同意或法令要求，本 App 不會向任何第三方出售、交換或揭露您的個人資料。</li>
-                <li>Google Gemini API 由 Google 提供並依其服務條款與隱私政策運作。建議您另行參閱 Google 的相關規定。</li>
+                <li id="privacy-sec-2-li1">除非經您同意或法令要求，本 App 不會向任何第三方出售、交換或揭露您的個人資料。</li>
+                <li id="privacy-sec-2-li2">Google Gemini API 由 Google 提供並依其服務條款與隱私政策運作。建議您另行參閱 Google 的相關規定。</li>
             </ul>
         </div>
 
         <!-- Section 4 -->
         <div class="pb-6 border-b-2 border-gray-200 mb-6">
-            <h2 class="text-2xl font-bold mb-4 text-primary-dark">三、資料安全</h2>
-            <p class="text-base mb-3">
+            <h2 id="privacy-sec-3-title" class="text-2xl font-bold mb-4 text-primary-dark">三、資料安全</h2>
+            <p id="privacy-sec-3-p1" class="text-base mb-3">
                 我們採取合理的技術與管理措施以保護您儲存在裝置上的資料，包括使用 iOS 系統提供的權限控制與儲存機制。但請注意，由於行動裝置環境無法保證絕對安全，請您妥善保管裝置與定期備份。
             </p>
         </div>
@@ -170,16 +174,16 @@
 
         <!-- Section 6 -->
         <div class="pb-6 border-b-2 border-gray-200 mb-6">
-            <h2 class="text-2xl font-bold mb-4 text-primary-dark">四、隱私權政策的修訂</h2>
-            <p class="text-base mb-3">
+            <h2 id="privacy-sec-4-title" class="text-2xl font-bold mb-4 text-primary-dark">四、隱私權政策的修訂</h2>
+            <p id="privacy-sec-4-p1" class="text-base mb-3">
                 我們可能因應功能調整或法令要求而更新本政策。若有重大變更，我們將於 App 內或更新紀錄中提示。建議您定期檢視最新內容。
             </p>
         </div>
 
         <!-- Section 7 -->
         <div class="pb-6">
-            <h2 class="text-2xl font-bold mb-4 text-primary-dark">五、聯絡我們</h2>
-            <p class="text-base mb-3">
+            <h2 id="privacy-sec-5-title" class="text-2xl font-bold mb-4 text-primary-dark">五、聯絡我們</h2>
+            <p id="privacy-sec-5-p1" class="text-base mb-3">
                 若您對本政策有任何疑問，請寄信至 <a href="mailto:chiugastudio@gmail.com"
                     class="text-accent hover:underline">chiugastudio@gmail.com</a> 與我們聯繫。
             </p>
@@ -225,30 +229,160 @@
                 }
             });
         }
-    </script>
-    <script>
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'zh-TW',
-                includedLanguages: 'zh-TW,en,ja,ko',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-            new google.translate.TranslateElement({
-                pageLanguage: 'zh-TW',
-                includedLanguages: 'zh-TW,en,ja,ko',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element_mobile');
-        }
+
+        const translations = {
+            'zh-TW': {
+                'privacy-title': '隱私權政策',
+                'privacy-date': '最近更新日期：2026.1.22',
+                'privacy-p1': '本隱私權政策（以下簡稱「本政策」）說明您在使用「記食開始」（以下簡稱「本 App」）時，我們如何收集、使用及保護您的資訊。請您在使用本 App 前，仔細閱讀並瞭解下列內容。',
+                'privacy-p2': '當您下載、安裝或使用本 App，即表示您已閱讀、瞭解並同意本政策之所有條款。',
+                'privacy-sec-1-title': '一、資料的收集與使用',
+                'privacy-sec-1-li1': '<strong>本地資料</strong>：您於本 App 中輸入的餐點、喝水、體重及運動等紀錄皆儲存在您自己的裝置上。我們不會將這些個人資料上傳至任何伺服器。',
+                'privacy-sec-1-li2': '<strong>相機與照片</strong>：若您啟用拍照或條碼掃描功能，本 App 需要取得相機權限。所拍攝的影像僅用於辨識食物或營養標示，不會儲存或傳送至除 Google Gemini API 之外的第三方服務。',
+                'privacy-sec-1-li3': '<strong>Google Gemini API</strong>：為提供食物與營養資訊分析，本 App 會在您選擇使用相關功能時，將照片或查詢內容傳送至 Google Gemini API。<u>傳送之資料僅包含當次分析所需的圖片內容，不包含任何個人識別資訊</u>，並依 Google 之隱私政策處理。依我們所知，Google 並不會使用該資料訓練模型或進行個人化分析。我們亦不會儲存或另行利用此等資料。',
+                'privacy-sec-1-li4': '<strong>使用統計</strong>：本 App 目前未內建任何行為追蹤或分析工具，也不會向我們或第三方回傳使用紀錄。',
+                'privacy-sec-1-li5': '<strong>應用內購買</strong>：若您透過 App Store 購買付費功能，交易與付款流程均由 Apple 處理。我們僅獲得購買狀態以啟用相應功能，不會收到您的付款資訊。若您訂閱月付或年付方案，可於 Apple ID 帳戶設定中取消續訂。',
+                'privacy-sec-2-title': '二、資料分享與第三方服務',
+                'privacy-sec-2-li1': '除非經您同意或法令要求，本 App 不會向任何第三方出售、交換或揭露您的個人資料。',
+                'privacy-sec-2-li2': 'Google Gemini API 由 Google 提供並依其服務條款與隱私政策運作。建議您另行參閱 Google 的相關規定。',
+                'privacy-sec-3-title': '三、資料安全',
+                'privacy-sec-3-p1': '我們採取合理的技術與管理措施以保護您儲存在裝置上的資料，包括使用 iOS 系統提供的權限控制與儲存機制。但請注意，由於行動裝置環境無法保證絕對安全，請您妥善保管裝置與定期備份。',
+                'privacy-sec-4-title': '四、隱私權政策的修訂',
+                'privacy-sec-4-p1': '我們可能因應功能調整或法令要求而更新本政策。若有重大變更，我們將於 App 內或更新紀錄中提示。建議您定期檢視最新內容。',
+                'privacy-sec-5-title': '五、聯絡我們',
+                'privacy-sec-5-p1': '若您對本政策有任何疑問，請寄信至 <a href="mailto:chiugastudio@gmail.com" class="text-accent hover:underline">chiugastudio@gmail.com</a> 與我們聯繫。'
+            },
+            'en': {
+                'privacy-title': 'Privacy Policy',
+                'privacy-date': 'Last updated: 2026.1.22',
+                'privacy-p1': 'This Privacy Policy (hereinafter "Policy") explains how we collect, use, and protect your information when you use the "Start Tracking Meals" mobile application (hereinafter "App"). Please read and understand the following before using this App.',
+                'privacy-p2': 'By downloading, installing, or using this App, you signify that you have read, understood, and agreed to all terms of this Policy.',
+                'privacy-sec-1-title': '1. Data Collection and Use',
+                'privacy-sec-1-li1': '<strong>Local Data</strong>: Records such as meals, water intake, weight, and exercise entered in this App are stored locally on your device. We do not upload this personal data to any server.',
+                'privacy-sec-1-li2': '<strong>Camera & Photos</strong>: If you enable photo or barcode scanning, the App requires camera permission. Captured images are used solely for identifying food or nutrition labels and are not stored or transmitted to third parties other than Google Gemini API.',
+                'privacy-sec-1-li3': '<strong>Google Gemini API</strong>: To analyze food and nutrition info, the App sends photos or queries to Google Gemini API when you use related features. <u>Transmitted data contains only image content required for analysis, without personal identifiers</u>, and is handled per Google’s privacy policy. To our knowledge, Google does not use this data to train models or for personalized analysis. We also do not store or reuse such data.',
+                'privacy-sec-1-li4': '<strong>Usage Statistics</strong>: The App currently has no built-in behavior tracking or analytics tools and does not send usage logs back to us or third parties.',
+                'privacy-sec-1-li5': '<strong>In-App Purchases</strong>: If you purchase paid features via App Store, transactions and payments are handled by Apple. We only receive purchase status to enable features and do not receive your payment info. Subscriptions can be canceled in Apple ID settings.',
+                'privacy-sec-2-title': '2. Data Sharing and Third-Party Services',
+                'privacy-sec-2-li1': 'Unless authorized by you or required by law, this App will not sell, exchange, or disclose your personal data to any third party.',
+                'privacy-sec-2-li2': 'Google Gemini API is provided by Google and operates under its terms and privacy policy. We suggest you review Google’s relevant regulations.',
+                'privacy-sec-3-title': '3. Data Security',
+                'privacy-sec-3-p1': 'We employ reasonable technical and management measures to protect data stored on your device, including iOS system permissions and storage mechanisms. However, please note that no mobile environment is absolutely secure; please safeguard your device and backup regularly.',
+                'privacy-sec-4-title': '4. Revisions to Privacy Policy',
+                'privacy-sec-4-p1': 'We may update this Policy in response to feature changes or legal requirements. Major changes will be notified within the App or via update notes. We recommend reviewing the latest content regularly.',
+                'privacy-sec-5-title': '5. Contact Us',
+                'privacy-sec-5-p1': 'If you have any questions about this Policy, please contact us at <a href="mailto:chiugastudio@gmail.com" class="text-accent hover:underline">chiugastudio@gmail.com</a>.'
+            },
+            'ko': {
+                'privacy-title': '개인정보 처리방침',
+                'privacy-date': '최근 업데이트: 2026.1.22',
+                'privacy-p1': '본 개인정보 처리방침(이하 "본 방침")은 귀하가 "식사 기록 시작" 모바일 애플리케이션(이하 "앱")을 사용할 때 당사가 귀하의 정보를 수집, 사용 및 보호하는 방법을 설명합니다. 앱 사용 전 다음 내용을 주의 깊게 읽어주십시오.',
+                'privacy-p2': '앱을 다운로드, 설치 또는 사용함으로써 귀하는 본 방침의 모든 조항을 읽고 이해하며 동의함을 나타냅니다.',
+                'privacy-sec-1-title': '1. 데이터 수집 및 사용',
+                'privacy-sec-1-li1': '<strong>로컬 데이터</strong>: 앱에 입력된 식사, 물, 체중 및 운동 기록은 귀하의 기기에 로컬로 저장됩니다. 당사는 이러한 개인 데이터를 서버에 업로드하지 않습니다.',
+                'privacy-sec-1-li2': '<strong>카메라 및 사진</strong>: 사진 또는 바코드 스캔 기능을 사용하는 경우 카메라 권한이 필요합니다. 촬영된 이미지는 음식 또는 영양 라벨 식별에만 사용되며 Google Gemini API 외의 제3자에게 저장되거나 전송되지 않습니다.',
+                'privacy-sec-1-li3': '<strong>Google Gemini API</strong>: 음식 및 영양 정보를 분석하기 위해, 관련 기능 사용 시 사진 또는 쿼리가 Google Gemini API로 전송됩니다. <u>전송된 데이터에는 개인 식별 정보 없이 분석에 필요한 이미지 콘텐츠만 포함되며</u>, Google 개인정보 처리방침에 따라 처리됩니다. 당사가 아는 한 Google은 이 데이터를 모델 학습이나 개인화 분석에 사용하지 않습니다. 당사 또한 이 데이터를 저장하거나 재사용하지 않습니다.',
+                'privacy-sec-1-li4': '<strong>사용 통계</strong>: 본 앱에는 현재 행동 추적 또는 분석 도구가 내장되어 있지 않으며 사용 로그를 당사나 제3자에게 전송하지 않습니다.',
+                'privacy-sec-1-li5': '<strong>인앱 결제</strong>: App Store를 통해 유료 기능을 구매하는 경우 거래 및 결제는 Apple에서 처리합니다. 당사는 기능 활성화를 위한 구매 상태만 수신하며 결제 정보는 받지 않습니다. 구독은 Apple ID 설정에서 취소할 수 있습니다.',
+                'privacy-sec-2-title': '2. 데이터 공유 및 제3자 서비스',
+                'privacy-sec-2-li1': '귀하의 동의가 있거나 법률에서 요구하는 경우를 제외하고, 본 앱은 귀하의 개인 데이터를 제3자에게 판매, 교환 또는 공개하지 않습니다.',
+                'privacy-sec-2-li2': 'Google Gemini API는 Google에서 제공하며 해당 약관 및 개인정보 처리방침에 따라 운영됩니다. Google의 관련 규정을 검토하는 것을 권장합니다.',
+                'privacy-sec-3-title': '3. 데이터 보안',
+                'privacy-sec-3-p1': '당사는 iOS 시스템 권한 및 저장 메커니즘을 포함하여 기기에 저장된 데이터를 보호하기 위해 합리적인 기술 및 관리 조치를 취합니다. 그러나 모바일 환경은 절대적으로 안전할 수 없으므로 기기를 잘 관리하고 정기적으로 백업하십시오.',
+                'privacy-sec-4-title': '4. 개인정보 처리방침 개정',
+                'privacy-sec-4-p1': '기능 변경 또는 법적 요구 사항에 따라 본 방침을 업데이트할 수 있습니다. 중대한 변경 사항은 앱 내 또는 업데이트 노트에서 공지됩니다. 최신 내용을 정기적으로 확인하는 것이 좋습니다.',
+                'privacy-sec-5-title': '5. 문의하기',
+                'privacy-sec-5-p1': '본 방침에 대해 문의 사항이 있는 경우 <a href="mailto:chiugastudio@gmail.com" class="text-accent hover:underline">chiugastudio@gmail.com</a>으로 연락해 주십시오.'
+            },
+            'ja': {
+                'privacy-title': 'プライバシーポリシー',
+                'privacy-date': '最終更新日：2026.1.22',
+                'privacy-p1': '本プライバシーポリシー（以下「本ポリシー」）は、「食事記録スタート」モバイルアプリケーション（以下「本アプリ」）を使用する際のお客様の情報の収集、使用、保護方法について説明します。本アプリを使用する前に、以下の内容をよくお読みください。',
+                'privacy-p2': '本アプリをダウンロード、インストール、または使用することにより、あなたは本ポリシーのすべての条項を読み、理解し、同意したものとみなされます。',
+                'privacy-sec-1-title': '一、データの収集と使用',
+                'privacy-sec-1-li1': '<strong>ローカルデータ</strong>：本アプリに入力された食事、水分、体重、運動などの記録は、お使いのデバイスにローカル保存されます。当社がこれらの個人データをサーバーにアップロードすることはありません。',
+                'privacy-sec-1-li2': '<strong>カメラと写真</strong>：写真やバーコードスキャン機能を使用する場合、カメラの権限が必要です。撮影された画像は食品や栄養ラベルの識別のみに使用され、Google Gemini API以外の第三者に保存または送信されることはありません。',
+                'privacy-sec-1-li3': '<strong>Google Gemini API</strong>：食品や栄養情報を分析するため、関連機能の使用時に写真やクエリがGoogle Gemini APIに送信されます。<u>送信されるデータには、分析に必要な画像コンテンツのみが含まれ、個人識別情報は含まれません</u>。また、Googleのプライバシーポリシーに従って処理されます。当社の知る限り、Googleはこのデータをモデルのトレーニングやパーソナライズ分析に使用しません。当社もこのデータを保存または再利用しません。',
+                'privacy-sec-1-li4': '<strong>使用統計</strong>：本アプリには現在、行動追跡や分析ツールは組み込まれておらず、使用ログを当社や第三者に送信することはありません。',
+                'privacy-sec-1-li5': '<strong>アプリ内購入</strong>：App Storeを通じて有料機能を購入する場合、取引と支払いはAppleによって処理されます。当社は機能の有効化に必要な購入ステータスのみを受け取り、支払い情報は受け取りません。サブスクリプションはApple ID設定でキャンセルできます。',
+                'privacy-sec-2-title': '二、データ共有と第三者サービス',
+                'privacy-sec-2-li1': 'あなたの同意がある場合または法令で要求される場合を除き、本アプリはあなたの個人データを第三者に販売、交換、または開示しません。',
+                'privacy-sec-2-li2': 'Google Gemini APIはGoogleによって提供され、その利用規約とプライバシーポリシーに基づいて運営されます。Googleの関連規定を確認することをお勧めします。',
+                'privacy-sec-3-title': '三、データセキュリティ',
+                'privacy-sec-3-p1': '当社は、iOSシステムの権限管理や保存メカニズムなど、デバイスに保存されたデータを保護するために合理的な技術的および管理的措置を講じます。ただし、モバイル環境は完全に安全であることを保証できないため、デバイスを適切に管理し、定期的にバックアップしてください。',
+                'privacy-sec-4-title': '四、プライバシーポリシーの改訂',
+                'privacy-sec-4-p1': '機能の調整や法的要件に応じて本ポリシーを更新する場合があります。重要な変更はアプリ内または更新履歴で通知されます。最新の内容を定期的に確認することをお勧めします。',
+                'privacy-sec-5-title': '五、お問い合わせ',
+                'privacy-sec-5-p1': '本ポリシーについてご質問がある場合は、<a href="mailto:chiugastudio@gmail.com" class="text-accent hover:underline">chiugastudio@gmail.com</a> までご連絡ください。'
+            }
+        };
 
         function getCurrentLang() {
-            const match = document.cookie.match(/googtrans=\/auto\/([^;]+)/);
-            return match ? match[1] : 'zh-TW';
+            return localStorage.getItem('lang') || 'zh-TW';
+        }
+
+        function applyTranslations(lang) {
+            const data = translations[lang] || translations['zh-TW'];
+            // Update simple IDs in content
+            Object.keys(data).forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.innerHTML = data[id]; // Use innerHTML to parse <strong> tags
+                }
+            });
+            document.documentElement.lang = lang;
+
+            // Mobile menu home link
+            const mobileHome = document.querySelector('#mobile-menu nav a');
+            if (mobileHome) {
+                if (lang === 'en') mobileHome.textContent = 'Home';
+                else if (lang === 'ko') mobileHome.textContent = '홈';
+                else if (lang === 'ja') mobileHome.textContent = 'ホーム';
+                else mobileHome.textContent = '首頁';
+            }
+            // Desktop nav home link
+            const navHome = document.querySelector('nav a[href="../index.html"]');
+            if (navHome) {
+                if (lang === 'en') navHome.textContent = 'Home';
+                else if (lang === 'ko') navHome.textContent = '홈';
+                else if (lang === 'ja') navHome.textContent = 'ホーム';
+                else navHome.textContent = '首頁';
+            }
+
+            // Footer links
+            const fSupport = document.querySelector('footer a[href*="support.html"]');
+            if (fSupport) {
+                if (lang === 'en') fSupport.textContent = 'Support';
+                else if (lang === 'ko') fSupport.textContent = '지원';
+                else if (lang === 'ja') fSupport.textContent = 'サポート';
+                else fSupport.textContent = '支援';
+            }
+            const fTerms = document.querySelector('footer a[href*="terms.html"]');
+            if (fTerms) {
+                if (lang === 'en') fTerms.textContent = 'Terms of Use';
+                else if (lang === 'ko') fTerms.textContent = '이용 약관';
+                else if (lang === 'ja') fTerms.textContent = '利用規約';
+                else fTerms.textContent = '使用者條款';
+            }
+            const fPrivacy = document.querySelector('footer a[href*="PrivacyPolicies.html"]');
+            if (fPrivacy) {
+                if (lang === 'en') fPrivacy.textContent = 'Privacy Policy';
+                else if (lang === 'ko') fPrivacy.textContent = '개인정보처리방침';
+                else if (lang === 'ja') fPrivacy.textContent = 'プライバシーポリシー';
+                else fPrivacy.textContent = '隱私政策';
+            }
+            const fCopyright = document.querySelector('footer p');
+            if (fCopyright) {
+                if (lang === 'en') fCopyright.innerHTML = '&copy; 2026 Start Tracking Meals. All rights reserved.';
+                else if (lang === 'ko') fCopyright.innerHTML = '&copy; 2026 식사 기록 시작. All rights reserved.';
+                else if (lang === 'ja') fCopyright.innerHTML = '&copy; 2026 食事記録スタート. All rights reserved.';
+                else fCopyright.innerHTML = '&copy; 2026 記食開始. All rights reserved.';
+            }
         }
 
         function setLang(lang) {
-            const value = '/auto/' + lang;
-            document.cookie = 'googtrans=' + value + '; path=/';
-            document.cookie = 'googtrans=' + value + '; path=/; domain=' + window.location.hostname;
+            localStorage.setItem('lang', lang);
+            applyTranslations(lang);
         }
 
         const langInfo = {
@@ -275,13 +409,13 @@
                     flag.textContent = langInfo[lang].flag;
                     code.textContent = langInfo[lang].code;
                     menu.classList.add('hidden');
-                    location.reload();
                 });
             });
         }
 
         document.addEventListener('DOMContentLoaded', () => {
             const current = getCurrentLang();
+            applyTranslations(current);
             ['lang-switcher', 'lang-switcher-mobile'].forEach(id => {
                 const el = document.getElementById(id);
                 if (el) {
@@ -292,7 +426,6 @@
             });
         });
     </script>
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 
