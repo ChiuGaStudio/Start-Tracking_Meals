@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,47 +11,74 @@
         /* Custom styles to match homepage theme */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #EEEEEE; /* 原本的背景色 */
-            color: #2D2926; /* 原本的文字顏色 */
+            background-color: #EEEEEE;
+            /* 原本的背景色 */
+            color: #2D2926;
+            /* 原本的文字顏色 */
             line-height: 1.6;
         }
+
         /* 定義主題顏色變數，方便 Tailwind 使用 */
-        .text-accent { color: #B8B0A6; }
-        .hover\:text-accent:hover { color: #B8B0A6; }
-        .text-primary-dark { color: #2D2926; }
-        .bg-accent { background-color: #B8B0A6; }
-        .text-highlight { color: #ECD676; } /* 標題強調色 */
+        .text-accent {
+            color: #B8B0A6;
+        }
+
+        .hover\:text-accent:hover {
+            color: #B8B0A6;
+        }
+
+        .text-primary-dark {
+            color: #2D2926;
+        }
+
+        .bg-accent {
+            background-color: #B8B0A6;
+        }
+
+        .text-highlight {
+            color: #ECD676;
+        }
+
+        /* 標題強調色 */
 
         /* 自定義樣式，確保列表項目縮排 */
         ul.policy-list li {
             list-style-type: disc;
-            margin-left: 1.5rem; /* 增加縮排 */
+            margin-left: 1.5rem;
+            /* 增加縮排 */
             margin-bottom: 0.75rem;
         }
+
         ol.policy-list li {
             list-style-type: decimal;
-            margin-left: 1.5rem; /* 增加縮排 */
+            margin-left: 1.5rem;
+            /* 增加縮排 */
             margin-bottom: 0.75rem;
         }
+
         /* 語言切換按鈕的自定義樣式 (此處已不再需要，但保留以防萬一) */
         .lang-toggle {
             @apply ml-4 bg-transparent border border-primary-dark text-primary-dark px-3 py-1 rounded-md cursor-pointer text-sm transition-colors duration-200;
         }
+
         .lang-toggle:hover {
             @apply bg-accent text-white;
         }
     </style>
 </head>
+
 <body class="antialiased pt-20">
     <!-- Header Section - Matching Homepage Style -->
-   <header class="fixed top-0 left-0 right-0 z-10 bg-white/95 shadow-sm py-4 px-6 md:px-12 flex items-center rounded-b-xl">
-         <a href="../index.html" class="flex items-center space-x-2">
+    <header
+        class="fixed top-0 left-0 right-0 z-10 bg-white/95 shadow-sm py-4 px-6 md:px-12 flex items-center rounded-b-xl">
+        <a href="../index.html" class="flex items-center space-x-2">
             <img src="../assets/start_tracking_meals_with_white_bg.png" alt="Logo" class="w-8 h-8 object-contain" />
             <div id="site-name" class="text-2xl font-bold text-[#2D2926]">記食開始</div>
         </a>
         <!-- Navigation - Only "首頁" link -->
-       <nav class="hidden md:flex space-x-8 items-center ml-auto">
-            <a id="nav-home" href="../index.html" class="text-primary-dark hover:text-accent font-medium transition-colors duration-200">首頁</a>
+        <nav class="hidden md:flex space-x-8 items-center ml-auto">
+            <a id="nav-home" href="../index.html"
+                class="text-primary-dark hover:text-accent font-medium transition-colors duration-200">首頁</a>
         </nav>
         <div id="lang-switcher" class="relative ml-4 mr-2">
             <button class="lang-toggle flex items-center text-sm bg-transparent focus:outline-none">
@@ -59,30 +87,42 @@
                 <span class="ml-1">▼</span>
             </button>
             <ul class="lang-menu hidden absolute right-0 mt-1 bg-white border border-gray-200 rounded text-sm w-40">
-                <li data-lang="zh-TW" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇹🇼</span>繁體中文</li>
-                <li data-lang="en" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇺🇸</span>English</li>
-                <li data-lang="ko" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇰🇷</span>한국어</li>
-                <li data-lang="ja" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇯🇵</span>日本語</li>
+                <li data-lang="zh-TW" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span
+                        class="mr-2">🇹🇼</span>繁體中文</li>
+                <li data-lang="en" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span
+                        class="mr-2">🇺🇸</span>English</li>
+                <li data-lang="ko" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span
+                        class="mr-2">🇰🇷</span>한국어</li>
+                <li data-lang="ja" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span
+                        class="mr-2">🇯🇵</span>日本語</li>
             </ul>
         </div>
-        
+
         <!-- Mobile menu button (hidden on desktop) -->
-               <button id="mobile-menu-button" class="md:hidden text-primary-dark hover:text-accent focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <button id="mobile-menu-button" class="md:hidden text-primary-dark hover:text-accent focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
         </button>
     </header>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden bg-white/95 shadow-md px-6 pb-4 fixed top-[4.5rem] left-0 right-0 z-20 transition-transform transition-opacity duration-300 transform -translate-y-4 opacity-0">
+    <div id="mobile-menu"
+        class="md:hidden hidden bg-white/95 shadow-md px-6 pb-4 fixed top-[4.5rem] left-0 right-0 z-20 transition-transform transition-opacity duration-300 transform -translate-y-4 opacity-0">
         <nav class="flex flex-col divide-y divide-gray-200">
-            <a id="nav-mobile-home" href="../index.html" class="text-xl py-3 text-primary-dark hover:text-accent font-medium transition-colors duration-200">首頁</a>
+            <a id="nav-mobile-home" href="../index.html"
+                class="text-xl py-3 text-primary-dark hover:text-accent font-medium transition-colors duration-200">首頁</a>
         </nav>
     </div>
 
     <!-- Main Content Container - Styled like a card -->
     <div class="max-w-4xl mx-auto p-6 md:p-10 bg-white rounded-xl shadow-lg mt-8 mb-12">
-        <h1 id="title" class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 text-center text-primary-dark">記食開始 – 支援頁面</h1>
-        <p class="text-sm text-right mb-4">最近更新日期：2025.7.28</p>
+        <h1 id="title"
+            class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 text-center text-primary-dark">
+            記食開始 – 支援頁面</h1>
+        <p class="text-sm text-right mb-4">最近更新日期：2026.1.22</p>
         <div class="pb-6 border-b-2 border-gray-200 mb-6">
             <h2 id="contact-title" class="text-2xl font-bold mb-4 text-primary-dark">如何聯絡我們</h2>
             <p id="contact-desc" class="text-base mb-3">
@@ -91,12 +131,6 @@
             <p class="text-base mb-3">
                 📧 <span id="email-label">聯絡信箱：</span>
                 <a href="mailto:chiugastudio@gmail.com" class="text-accent hover:underline">chiugastudio@gmail.com</a>
-            </p>
-            <p class="text-base mb-3">
-                🛠️ <span id="github-label">GitHub 問題追蹤：</span>
-                <a href="https://github.com/ChiuGaStudio/Start-Tracking_Meals/issues" target="_blank" class="text-accent hover:underline">
-                    提出或評論問題
-                </a>
             </p>
         </div>
 
@@ -118,16 +152,20 @@
         </div>
     </div>
 
-     <!-- Footer Section -->
+    <!-- Footer Section -->
     <footer class="bg-[#B8B0A6] text-[#2D2926] py-8 mt-12 rounded-t-xl px-6 md:px-12">
         <div class="flex flex-col md:flex-row md:justify-between items-center">
             <!-- 版權資訊 -->
-            <p id="footer-copyright" class="order-2 md:order-1 w-full md:w-auto text-center md:text-right">&copy; 2025 記食開始. All rights reserved.</p>
+            <p id="footer-copyright" class="order-2 md:order-1 w-full md:w-auto text-center md:text-right">&copy; 2025
+                記食開始. All rights reserved.</p>
             <!-- 支援連結 -->
             <div class="flex justify-center space-x-4 order-1 md:order-2 w-full md:w-auto mb-2 md:mb-0">
-                <a id="footer-support" href="support.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">支援</a>
-                <a id="footer-terms" href="../terms/terms.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">使用者條款</a>
-                <a id="footer-privacy" href="../PrivacyPolicies/PrivacyPolicies.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">隱私政策</a>
+                <a id="footer-support" href="support.html"
+                    class="text-[#2D2926] hover:text-white transition-colors duration-200">支援</a>
+                <a id="footer-terms" href="../terms/terms.html"
+                    class="text-[#2D2926] hover:text-white transition-colors duration-200">使用者條款</a>
+                <a id="footer-privacy" href="../PrivacyPolicies/PrivacyPolicies.html"
+                    class="text-[#2D2926] hover:text-white transition-colors duration-200">隱私政策</a>
             </div>
         </div>
     </footer>
@@ -145,7 +183,7 @@
                 } else {
                     mobileMenu.classList.add("-translate-y-4", "opacity-0");
                     mobileMenu.classList.remove("translate-y-0", "opacity-100");
-                    mobileMenu.addEventListener("transitionend", function handler(){
+                    mobileMenu.addEventListener("transitionend", function handler() {
                         mobileMenu.classList.add("hidden");
                         mobileMenu.removeEventListener("transitionend", handler);
                     }, { once: true });
@@ -259,9 +297,9 @@
 
         const langInfo = {
             'zh-TW': { flag: '🇹🇼', code: '中文' },
-            'en':    { flag: '🇺🇸', code: 'EN' },
-            'ko':    { flag: '🇰🇷', code: 'KO' },
-            'ja':    { flag: '🇯🇵', code: 'JA' }
+            'en': { flag: '🇺🇸', code: 'EN' },
+            'ko': { flag: '🇰🇷', code: 'KO' },
+            'ja': { flag: '🇯🇵', code: 'JA' }
         };
 
         function initLangSwitcher(id) {
@@ -299,4 +337,5 @@
         });
     </script>
 </body>
+
 </html>

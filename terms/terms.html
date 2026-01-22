@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,40 +11,65 @@
         /* Custom styles to match homepage theme */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #EEEEEE; /* 原本的背景色 */
-            color: #2D2926; /* 原本的文字顏色 */
+            background-color: #EEEEEE;
+            /* 原本的背景色 */
+            color: #2D2926;
+            /* 原本的文字顏色 */
             line-height: 1.6;
         }
+
         /* 定義主題顏色變數，方便 Tailwind 使用 */
-        .text-accent { color: #B8B0A6; }
-        .hover\:text-accent:hover { color: #B8B0A6; }
-        .text-primary-dark { color: #2D2926; }
-        .bg-accent { background-color: #B8B0A6; }
-        .text-highlight { color: #ECD676; } /* 標題強調色 */
+        .text-accent {
+            color: #B8B0A6;
+        }
+
+        .hover\:text-accent:hover {
+            color: #B8B0A6;
+        }
+
+        .text-primary-dark {
+            color: #2D2926;
+        }
+
+        .bg-accent {
+            background-color: #B8B0A6;
+        }
+
+        .text-highlight {
+            color: #ECD676;
+        }
+
+        /* 標題強調色 */
 
         /* 自定義樣式，確保列表項目縮排 */
         ul.policy-list li {
             list-style-type: disc;
-            margin-left: 1.5rem; /* 增加縮排 */
+            margin-left: 1.5rem;
+            /* 增加縮排 */
             margin-bottom: 0.75rem;
         }
+
         ol.policy-list li {
             list-style-type: decimal;
-            margin-left: 1.5rem; /* 增加縮排 */
+            margin-left: 1.5rem;
+            /* 增加縮排 */
             margin-bottom: 0.75rem;
         }
     </style>
 </head>
+
 <body class="antialiased pt-20">
     <!-- Header Section - Matching Homepage Style -->
-   <header class="fixed top-0 left-0 right-0 z-10 bg-white/95 shadow-sm py-4 px-6 md:px-12 flex items-center rounded-b-xl">
-           <a href="../index.html" class="flex items-center space-x-2">
+    <header
+        class="fixed top-0 left-0 right-0 z-10 bg-white/95 shadow-sm py-4 px-6 md:px-12 flex items-center rounded-b-xl">
+        <a href="../index.html" class="flex items-center space-x-2">
             <img src="../assets/start_tracking_meals_with_white_bg.png" alt="Logo" class="w-8 h-8 object-contain" />
             <div class="text-2xl font-bold text-[#2D2926]">記食開始</div>
         </a>
         <!-- Navigation - Only "首頁" link -->
-       <nav class="hidden md:flex space-x-8 items-center ml-auto">
-            <a href="../index.html" class="text-primary-dark hover:text-accent font-medium transition-colors duration-200">首頁</a>
+        <nav class="hidden md:flex space-x-8 items-center ml-auto">
+            <a href="../index.html"
+                class="text-primary-dark hover:text-accent font-medium transition-colors duration-200">首頁</a>
         </nav>
         <div id="lang-switcher" class="relative ml-4 mr-2">
             <button class="lang-toggle flex items-center text-sm bg-transparent focus:outline-none">
@@ -52,42 +78,55 @@
                 <span class="ml-1">▼</span>
             </button>
             <ul class="lang-menu hidden absolute right-0 mt-1 bg-white border border-gray-200 rounded text-sm w-40">
-                <li data-lang="zh-TW" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇹🇼</span>繁體中文</li>
-                <li data-lang="en" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇺🇸</span>English</li>
-                <li data-lang="ko" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇰🇷</span>한국어</li>
-                <li data-lang="ja" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇯🇵</span>日本語</li>
+                <li data-lang="zh-TW" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span
+                        class="mr-2">🇹🇼</span>繁體中文</li>
+                <li data-lang="en" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span
+                        class="mr-2">🇺🇸</span>English</li>
+                <li data-lang="ko" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span
+                        class="mr-2">🇰🇷</span>한국어</li>
+                <li data-lang="ja" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span
+                        class="mr-2">🇯🇵</span>日本語</li>
             </ul>
         </div>
         <div id="google_translate_element" class="hidden"></div>
         <!-- Mobile menu button (hidden on desktop) -->
-          <button id="mobile-menu-button" class="md:hidden text-primary-dark hover:text-accent focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <button id="mobile-menu-button" class="md:hidden text-primary-dark hover:text-accent focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
         </button>
     </header>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden bg-white/95 shadow-md px-6 pb-4 fixed top-[4.5rem] left-0 right-0 z-20 transition-transform transition-opacity duration-300 transform -translate-y-4 opacity-0">
+    <div id="mobile-menu"
+        class="md:hidden hidden bg-white/95 shadow-md px-6 pb-4 fixed top-[4.5rem] left-0 right-0 z-20 transition-transform transition-opacity duration-300 transform -translate-y-4 opacity-0">
         <nav class="flex flex-col divide-y divide-gray-200">
-            <a href="../index.html" class="text-xl py-3 text-primary-dark hover:text-accent font-medium transition-colors duration-200">首頁</a>
+            <a href="../index.html"
+                class="text-xl py-3 text-primary-dark hover:text-accent font-medium transition-colors duration-200">首頁</a>
         </nav>
         <div id="google_translate_element_mobile" class="hidden"></div>
     </div>
 
     <!-- Main Content Container - Styled like a card -->
     <div class="max-w-4xl mx-auto p-6 md:p-10 bg-white rounded-xl shadow-lg mt-8 mb-12">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 text-center text-primary-dark">服務條款與使用者協議</h1>
-        <p class="text-sm text-right mb-4">最近更新日期：2025.7.28</p>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 text-center text-primary-dark">
+            服務條款與使用者協議</h1>
+        <p class="text-sm text-right mb-4">最近更新日期：2026.1.22</p>
 
         <div class="mb-6">
             <h2 class="text-2xl font-bold mb-4 text-primary-dark">一、認知與接受條款</h2>
-            <p class="text-base mb-3">本《使用者授權條款》(以下簡稱「本條款」) 係由您（以下稱「終端使用者」或「您」）與 ChiuGaStudio（以下稱「本公司」或「我們」）就「記食開始」行動應用程式（以下稱「本 App」）所訂立。</p>
+            <p class="text-base mb-3">本《使用者授權條款》(以下簡稱「本條款」) 係由您（以下稱「終端使用者」或「您」）與 Circle
+                Studio（以下稱「本公司」或「我們」）就「記食開始」行動應用程式（以下稱「本 App」）所訂立。</p>
             <p class="text-base mb-3">您下載、安裝、存取或使用本 App，即表示您已閱讀、理解並同意受本條款約束；若您不同意任何條款，請勿使用本 App。</p>
             <p class="text-base mb-3">我們得隨時修改本條款並於本 App 或官方網站公告。修訂後若您仍繼續使用本 App，即視為您同意修訂內容。</p>
         </div>
 
-       <div class="mb-6">
+        <div class="mb-6">
             <h2 class="text-2xl font-bold mb-4 text-primary-dark">二、授權範圍</h2>
-            <p class="text-base mb-3">我們授予您在個人持有或控制的 Apple 裝置上安裝及使用本 App 的非獨占、不可轉讓、有限授權，並以 Apple 媒體服務條款與條件所載之「使用規則」為限。</p>
+            <p class="text-base mb-3">我們授予您在個人持有或控制的 Apple 裝置上安裝及使用本 App 的非獨占、不可轉讓、有限授權，並以 Apple 媒體服務條款與條件所載之「使用規則」為限。
+            </p>
             <p class="text-base mb-3">未經明示授權，您不得轉售、出租、再授權本 App；亦不得對本 App 進行反向工程、反編譯、拆解、修改或衍生其他作品，但法律另有允許者除外。</p>
             <p class="text-base mb-3">您得透過 Apple 的「家人共享」或大量採購機制使用本 App，但仍須遵守本條款與 Apple 相關規定。</p>
         </div>
@@ -113,7 +152,7 @@
             </ul>
         </div>
 
-       <div class="mb-6">
+        <div class="mb-6">
             <h2 class="text-2xl font-bold mb-4 text-primary-dark">四、訂閱、付款與續約</h2>
             <p class="text-base mb-3">付費訂閱須透過 Apple 的應用程式內付費 (IAP) 機制購買，可選擇月繳或年繳方案，實際費用以 App Store 顯示為準。</p>
             <p class="text-base mb-3">所有訂閱均為自動續訂。若您欲終止續訂，需於目前訂閱期間結束前至少 24 小時在 Apple ID 帳戶設定中取消。</p>
@@ -171,7 +210,7 @@
             <p class="text-base mb-3">在任何情況下，本公司對所有損害向您負之總責任，以您在導致索賠事件前十二個月內為使用付費服務實際支付的金額或五十美元（以較高者為準）為限。</p>
         </div>
 
-      <div class="mb-6">
+        <div class="mb-6">
             <h2 class="text-2xl font-bold mb-4 text-primary-dark">十二、智慧財產權索賠</h2>
             <p class="text-base mb-3">若第三方主張本 App 侵害其智慧財產權，本公司將負責調查、辯護及處理相關索賠，Apple 不負責任。</p>
         </div>
@@ -186,21 +225,21 @@
             <p class="text-base mb-3">使用本 App 時，您應遵守任何適用的第三方協議條款，例如電信業者或雲端服務的使用規範。</p>
         </div>
 
-         <div class="mb-6">
+        <div class="mb-6">
             <h2 class="text-2xl font-bold mb-4 text-primary-dark">十五、第三方受益人</h2>
             <p class="text-base mb-3">您與本公司均同意 Apple 及其子公司為本條款的第三方受益人，當您接受本條款後，Apple 即有權以第三方受益人身份對您執行本條款。</p>
         </div>
 
-       <div class="mb-6">
+        <div class="mb-6">
             <h2 class="text-2xl font-bold mb-4 text-primary-dark">十六、準據法與爭議解決</h2>
             <p class="text-base mb-3">本條款之解釋與適用均以中華民國（台灣）法律為準據法。</p>
             <p class="text-base mb-3">因本條款或本 App 所生的任何爭議，雙方應先友好協商；協商不成時，以台灣台北地方法院為第一審專屬管轄法院。</p>
         </div>
 
-       <div class="mb-6">
+        <div class="mb-6">
             <h2 class="text-2xl font-bold mb-4 text-primary-dark">十七、開發者名稱與地址</h2>
             <p class="text-base mb-3">如有任何疑問、意見或投訴，請聯繫：</p>
-            <p class="text-base mb-3">開發者：ChiuGaStudio</p>
+            <p class="text-base mb-3">開發者：Circle Studio</p>
             <p class="text-base mb-3">電子郵件：請依 App 內聯絡資訊為準</p>
         </div>
 
@@ -212,16 +251,19 @@
         </div>
     </div>
 
-     <!-- Footer Section -->
+    <!-- Footer Section -->
     <footer class="bg-[#B8B0A6] text-[#2D2926] py-8 mt-12 rounded-t-xl px-6 md:px-12">
         <div class="flex flex-col md:flex-row md:justify-between items-center">
             <!-- 版權資訊 -->
-            <p class="order-2 md:order-1 w-full md:w-auto text-center md:text-right">&copy; 2025 記食開始. All rights reserved.</p>
+            <p class="order-2 md:order-1 w-full md:w-auto text-center md:text-right">&copy; 2025 記食開始. All rights
+                reserved.</p>
             <!-- 支援連結 -->
             <div class="flex justify-center space-x-4 order-1 md:order-2 w-full md:w-auto mb-2 md:mb-0">
-                <a href="../supports/support.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">支援</a>
+                <a href="../supports/support.html"
+                    class="text-[#2D2926] hover:text-white transition-colors duration-200">支援</a>
                 <a href="terms.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">使用者條款</a>
-                <a href="../PrivacyPolicies/PrivacyPolicies.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">隱私政策</a>
+                <a href="../PrivacyPolicies/PrivacyPolicies.html"
+                    class="text-[#2D2926] hover:text-white transition-colors duration-200">隱私政策</a>
             </div>
         </div>
     </footer>
@@ -239,7 +281,7 @@
                 } else {
                     mobileMenu.classList.add("-translate-y-4", "opacity-0");
                     mobileMenu.classList.remove("translate-y-0", "opacity-100");
-                    mobileMenu.addEventListener("transitionend", function handler(){
+                    mobileMenu.addEventListener("transitionend", function handler() {
                         mobileMenu.classList.add("hidden");
                         mobileMenu.removeEventListener("transitionend", handler);
                     }, { once: true });
@@ -274,9 +316,9 @@
 
         const langInfo = {
             'zh-TW': { flag: '🇹🇼', code: '中文' },
-            'en':    { flag: '🇺🇸', code: 'EN' },
-            'ko':    { flag: '🇰🇷', code: 'KO' },
-            'ja':    { flag: '🇯🇵', code: 'JA' }
+            'en': { flag: '🇺🇸', code: 'EN' },
+            'ko': { flag: '🇰🇷', code: 'KO' },
+            'ja': { flag: '🇯🇵', code: 'JA' }
         };
 
         function initLangSwitcher(id) {
@@ -315,4 +357,5 @@
     </script>
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
+
 </html>

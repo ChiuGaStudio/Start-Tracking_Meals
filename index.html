@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,56 +15,75 @@
             background-color: #ffffff;
             color: #2D2926;
         }
+
         /* 英雄區塊的漸層背景，使用原本的白色到淺灰色漸層 */
         .hero-gradient {
             background: linear-gradient(to right, #ffffff, #f6f6f6);
         }
+
         /* App Store 按鈕樣式 */
         .app-store-btn {
             @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-white transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg;
         }
+
         .app-store-btn.apple {
             @apply bg-black hover:bg-gray-900;
         }
+
         .app-store-btn.google {
             @apply bg-gray-800 hover:bg-gray-700;
         }
+
         /* 手機框架樣式 */
         .phone-frame {
-            @apply relative bg-gray-900 rounded-[4.5rem] p-2 shadow-2xl;
-            transform: scale(1.25);
-            width: 240px; /* Adjust as needed - Increased from 200px */
-            height: 480px; /* Adjust as needed - Increased from 400px */
+            @apply relative bg-gray-900 rounded-[4.5rem] p-2 shadow-2xl overflow-hidden;
+            transform: scale(1.1);
+            width: 240px;
+            /* Adjust as needed - Increased from 200px */
+            height: 480px;
+            /* Adjust as needed - Increased from 400px */
         }
+
         .phone-screen {
-            @apply w-full h-full rounded-[2rem] overflow-hidden;
+            @apply w-full h-full rounded-3xl overflow-hidden;
         }
+
         .phone-screen img {
             @apply w-full h-full object-cover;
         }
-                html {
+
+        html {
             scroll-behavior: smooth;
         }
+
         :root {
-        --brand-gray: #B8B0A6;
+            --brand-gray: #B8B0A6;
         }
+
         .brand-gray {
-        background-color: var(--brand-gray);
+            background-color: var(--brand-gray);
         }
     </style>
 </head>
+
 <body class="antialiased pt-20">
     <!-- Header Section -->
-    <header class="fixed top-0 left-0 right-0 z-10 bg-white/95 shadow-sm py-4 px-6 md:px-12 flex justify-between items-center rounded-b-xl">
+    <header
+        class="fixed top-0 left-0 right-0 z-10 bg-white/95 shadow-sm py-4 px-6 md:px-12 flex justify-between items-center rounded-b-xl">
         <a href="index.html" class="flex items-center space-x-2 pl-8 md:pl-8">
-            <img src="assets/start_tracking_meals_with_white_bg.png" alt="Logo" class="w-10 h-10 object-contain" />
+            <img src="assets/start_tracking_meals_with_white_bg.png" alt="Logo"
+                class="w-10 h-10 object-contain rounded-lg" />
             <div class="text-xl md:text-2xl font-bold text-[#2D2926]">記食開始</div>
         </a>
         <nav class="hidden md:flex space-x-8 ml-auto">
-            <a id="nav-home" href="#" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">首頁</a>
-            <a id="nav-features" href="#features" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">功能說明</a>
-            <a id="nav-showcase" href="#showcase" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">版本比較</a>
-            <a id="nav-qanda" href="#qanda" class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">常見問題</a>
+            <a id="nav-home" href="#"
+                class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">首頁</a>
+            <a id="nav-features" href="#features"
+                class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">功能說明</a>
+            <a id="nav-showcase" href="#showcase"
+                class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">版本比較</a>
+            <a id="nav-qanda" href="#qanda"
+                class="text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">常見問題</a>
         </nav>
         <div id="lang-switcher" class="relative mr-2 ml-9">
             <button class="lang-toggle flex items-center text-sm bg-transparent focus:outline-none">
@@ -72,37 +92,51 @@
                 <span class="ml-1">▼</span>
             </button>
             <ul class="lang-menu hidden absolute right-0 mt-1 bg-white border border-gray-200 rounded text-sm w-40">
-                <li data-lang="zh-TW" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇹🇼</span>繁體中文</li>
-                <li data-lang="en" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇺🇸</span>English</li>
-                <li data-lang="ko" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇰🇷</span>한국어</li>
-                <li data-lang="ja" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇯🇵</span>日本語</li>
+                <li data-lang="zh-TW" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span
+                        class="mr-2">🇹🇼</span>繁體中文</li>
+                <li data-lang="en" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span
+                        class="mr-2">🇺🇸</span>English</li>
+                <li data-lang="ko" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span
+                        class="mr-2">🇰🇷</span>한국어</li>
+                <li data-lang="ja" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span
+                        class="mr-2">🇯🇵</span>日本語</li>
             </ul>
         </div>
         <!-- Mobile menu button (hidden on desktop) -->
-       <button id="mobile-menu-button" class="md:hidden text-[#2D2926] hover:text-[#B8B0A6] focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <button id="mobile-menu-button" class="md:hidden text-[#2D2926] hover:text-[#B8B0A6] focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
         </button>
     </header>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden bg-white/95 shadow-md px-6 pb-4 fixed top-[4.5rem] left-0 right-0 z-20 transition-transform transition-opacity duration-300 transform -translate-y-4 opacity-0 rounded-b-xl">
+    <div id="mobile-menu"
+        class="md:hidden hidden bg-white/95 shadow-md px-6 pb-4 fixed top-[4.5rem] left-0 right-0 z-20 transition-transform transition-opacity duration-300 transform -translate-y-4 opacity-0 rounded-b-xl">
         <nav class="flex flex-col divide-y divide-gray-200">
-            <a id="nav-mobile-home" href="#" class="text-xl py-4 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">首頁</a>
-            <a id="nav-mobile-features" href="#features" class="text-xl py-4 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">功能說明</a>
-            <a id="nav-mobile-showcase" href="#showcase" class="text-xl py-4 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">版本比較</a>
-            <a id="nav-mobile-qanda" href="#qanda" class="text-xl py-4 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">常見問題</a>
-        </nav>        
+            <a id="nav-mobile-home" href="#"
+                class="text-xl py-4 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">首頁</a>
+            <a id="nav-mobile-features" href="#features"
+                class="text-xl py-4 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">功能說明</a>
+            <a id="nav-mobile-showcase" href="#showcase"
+                class="text-xl py-4 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">版本比較</a>
+            <a id="nav-mobile-qanda" href="#qanda"
+                class="text-xl py-4 text-[#2D2926] hover:text-[#B8B0A6] font-medium transition-colors duration-200">常見問題</a>
+        </nav>
     </div>
 
     <!-- Hero Section -->
-    <section class="hero-gradient py-16 md:py-24 px-6 md:px-12 text-[#2D2926] flex flex-col md:flex-row items-center justify-between gap-12 rounded-b-xl">
+    <section
+        class="hero-gradient py-16 md:py-24 px-6 md:px-12 text-[#2D2926] flex flex-col md:flex-row items-center justify-between gap-12 rounded-b-xl">
         <!-- Hero Text Content -->
         <div class="flex-1 text-leading md:text-leading pl-8 md:pl-8">
             <h1 id="hero-title1" class="text-6xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-6">
                 記食開始
             </h1>
             <h1 id="hero-title2" class="text-1xl md:text-4xl lg:text-3xl font-extrabold leading-tight mb-6">
-              讓你愛上 <span class="text-[#B8B0A6]">記</span>錄飲<span class="text-[#B8B0A6]">食</span> 的App
+                讓你愛上 <span class="text-[#B8B0A6]">記</span>錄飲<span class="text-[#B8B0A6]">食</span> 的App
             </h1>
             <!--  <p id="hero-p1" class="text-base md:text-lg mb-0 max-w-2xl mx-auto md:mx-0 opacity-70">
                 AI 飲食助手：輕鬆追蹤熱量與營養，實現健康目標！
@@ -117,16 +151,20 @@
             <div class="flex flex-col sm:flex-row justify-leading md:justify-leading gap-4">
                 <!-- Apple App Store Button -->
                 <a href="#" class="app-store-btn apple">
-                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 0C8.683 0 6.002 2.68 6.002 6c0 3.32 2.681 6 6 6s6-2.68 6-6c0-3.32-2.681-6-6-6zm0 18c-3.32 0-6-2.68-6-6s2.68-6 6-6 6 2.68 6 6-2.68 6-6 6zM12 2.5c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4zM12 14.5c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z"/>
-                        <path d="M17.5 12c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-11 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm11 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-11 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zM12 24c-6.627 0-12-5.373-12-12s5.373-12 12-12 12 5.373 12 12-5.373 12-12 12zm0-22c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8zm0-14c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z"/>
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0C8.683 0 6.002 2.68 6.002 6c0 3.32 2.681 6 6 6s6-2.68 6-6c0-3.32-2.681-6-6-6zm0 18c-3.32 0-6-2.68-6-6s2.68-6 6-6 6 2.68 6 6-2.68 6-6 6zM12 2.5c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4zM12 14.5c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z" />
+                        <path
+                            d="M17.5 12c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-11 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm11 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-11 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zM12 24c-6.627 0-12-5.373-12-12s5.373-12 12-12 12 5.373 12 12-5.373 12-12 12zm0-22c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8zm0-14c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z" />
                     </svg>
                     App Store
                 </a>
                 <!-- Google Play Store Button -->
                 <a href="#" class="app-store-btn google">
-                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 2.5L17 12 7 21.5V2.5zM19 12l-6-5.5V17.5L19 12z"/>
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 2.5L17 12 7 21.5V2.5zM19 12l-6-5.5V17.5L19 12z" />
                     </svg>
                     Google Play
                 </a>
@@ -138,75 +176,102 @@
             <div class="phone-frame">
                 <div class="phone-screen">
                     <!-- Placeholder for app screen content -->
-                    <img src="assets/main-portrait.png" alt="App Screen Mockup" />
+                    <!-- Carousel Image -->
+                    <img id="carousel-image" src="assets/1.png" alt="App Screen Mockup"
+                        class="rounded-3xl transition-opacity duration-1000 opacity-100" />
                 </div>
             </div>
         </div>
-   </section>
+    </section>
 
-     <!-- Features Section -->
+    <!-- Features Section -->
     <section id="features" class="py-12 px-6 md:px-12 bg-white text-[#2D2926] scroll-mt-20">
         <h2 id="features-title" class="text-2xl font-bold mb-10 text-center">主要功能</h2>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
-            <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
+            <div
+                class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">🍽️</div>
                 <h3 id="feat-meal-title" class="font-semibold mb-2">餐點管理</h3>
-                <p id="feat-meal-desc" class="text-sm">新增、編輯與刪除餐點，內建資料庫與條碼、照片辨識自動填值。</p>
+                <p id="feat-meal-desc" class="text-sm">新增、編輯與刪除餐點，內建食物資料庫與自建項目管理。</p>
             </div>
-            <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
+            <div
+                class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">📊</div>
                 <h3 id="feat-daily-title" class="font-semibold mb-2">每日記食</h3>
                 <p id="feat-daily-desc" class="text-sm">顯示每日卡路里及蛋白質(加入premium可以看到更多項目！)，並支援桌面小工具快速追蹤當日記食。</p>
             </div>
-            <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
+            <div
+                class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">⚙️</div>
                 <h3 id="feat-custom-title" class="font-semibold mb-2">個人化設定</h3>
                 <p id="feat-custom-desc" class="text-sm">依身高、體重和性別計算出每日的營養攝取建議值，也可自定目標，追蹤每日的達標率。</p>
             </div>
-            <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
+            <div
+                class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">📅</div>
                 <h3 id="feat-history-title" class="font-semibold mb-2">歷史紀錄</h3>
                 <p id="feat-history-desc" class="text-sm">可透過行事曆快速切換日期，瀏覽每日記食的歷史紀錄。</p>
             </div>
-               <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
+            <div
+                class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">📈</div>
                 <h3 id="feat-analysis-title" class="font-semibold mb-2 flex items-center justify-center gap-1">數據分析
                     <span class="text-xs font-semibold text-yellow-600 bg-yellow-200 rounded px-1">Premium</span>
                 </h3>
                 <p id="feat-analysis-desc" class="text-sm">圖表呈現攝取與運動趨勢，提供飲食建議。</p>
             </div>
-              <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
+            <div
+                class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">💧</div>
-                 <h3 id="feat-water-title" class="font-semibold mb-2 flex items-center justify-center gap-1">喝水追蹤
+                <h3 id="feat-water-title" class="font-semibold mb-2 flex items-center justify-center gap-1">喝水追蹤
                     <span class="text-xs font-semibold text-yellow-600 bg-yellow-200 rounded px-1">Premium</span>
                 </h3>
                 <p id="feat-water-desc" class="text-sm">記錄每日喝水量並可以開啟個人提醒，方便且快速的讓您保持喝水的習慣。</p>
             </div>
-            <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
+            <div
+                class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">📂</div>
-                 <h3 id="feat-export-title" class="font-semibold mb-2 flex items-center justify-center gap-1">資料匯出
+                <h3 id="feat-export-title" class="font-semibold mb-2 flex items-center justify-center gap-1">資料匯出
                     <span class="text-xs font-semibold text-yellow-600 bg-yellow-200 rounded px-1">Premium</span>
                 </h3>
                 <p id="feat-export-desc" class="text-sm">所有記食紀錄可匯出成excel檔案，方便您備份或是印出與專家們訂定目標。</p>
             </div>
-              <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
+            <div
+                class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">🍪</div>
                 <h3 id="feat-cheat-title" class="font-semibold mb-2 flex items-center justify-center gap-1">偷吃紀錄
                     <span class="text-xs font-semibold text-yellow-600 bg-yellow-200 rounded px-1">Premium</span>
                 </h3>
                 <p id="feat-cheat-desc" class="text-sm">有趣的小工具，讓您看到歷史紀錄時，可以會心一笑。</p>
             </div>
-            <div class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
+            <div
+                class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
                 <div class="text-4xl mb-4">🤖</div>
                 <h3 id="feat-ai-title" class="font-semibold mb-2 flex items-center justify-center gap-1">AI辨識紀錄
                     <span class="text-xs font-semibold text-yellow-600 bg-yellow-200 rounded px-1">Premium</span>
                 </h3>
                 <p id="feat-ai-desc" class="text-sm">方便且聰明的為您辨識照片中，食物的營養成分，也支援拍攝營養標示表，並自動填入分析結果，加快您每日記食的速度。</p>
             </div>
+            <div
+                class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
+                <div class="text-4xl mb-4">⚖️</div>
+                <h3 id="feat-weight-title" class="font-semibold mb-2 flex items-center justify-center gap-1">體重追蹤
+                    <span class="text-xs font-semibold text-yellow-600 bg-yellow-200 rounded px-1">Premium</span>
+                </h3>
+                <p id="feat-weight-desc" class="text-sm">每日輸入體重並檢視歷史趨勢，幫助您掌握長期健康變化。</p>
+            </div>
+            <div
+                class="bg-gray-50 p-6 rounded-lg shadow text-center transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-100 active:scale-95 cursor-pointer">
+                <div class="text-4xl mb-4">🔔</div>
+                <h3 id="feat-notify-title" class="font-semibold mb-2 flex items-center justify-center gap-1">通知排程
+                    <span class="text-xs font-semibold text-yellow-600 bg-yellow-200 rounded px-1">Premium</span>
+                </h3>
+                <p id="feat-notify-desc" class="text-sm">自訂推播通知時間，例如喝水提醒或每日分析推播，讓您不錯過任何健康習慣。</p>
+            </div>
         </div>
     </section>
 
-<!-- Showcase Section -->
+    <!-- Showcase Section -->
     <section id="showcase" class="py-12 px-6 md:px-12 bg-gray-50 scroll-mt-20">
         <h2 id="showcase-title" class="text-2xl font-bold mb-10 text-center text-[#2D2926]">免費與Premium</h2>
         <div class="max-w-3xl mx-auto overflow-x-auto">
@@ -223,113 +288,158 @@
                     <tr class="odd:bg-white even:bg-gray-50">
                         <td id="row-record" class="px-4 py-2 text-left">飲食紀錄</td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
                         <td id="row-history" class="px-4 py-2 text-left">歷史記食查詢</td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
                         <td id="row-target" class="px-4 py-2 text-left">飲食目標設定</td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
                         <td id="row-analysis" class="px-4 py-2 text-left">記食分析</td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
                         <td id="row-adv-target" class="px-4 py-2 text-left">進階飲食目標設定</td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
                         </td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
                         <td id="row-adv-analysis" class="px-4 py-2 text-left">進階記食分析</td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
                         </td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
                         <td id="row-water" class="px-4 py-2 text-left">喝水量紀錄</td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
                         </td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
                         <td id="row-cheat" class="px-4 py-2 text-left">偷吃小點心紀錄</td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
                         </td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
                         <td id="row-ai-food" class="px-4 py-2 text-left">AI辨識記食-食物辨識分析</td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
                         </td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
                         <td id="row-ai-chart" class="px-4 py-2 text-left">AI辨識記食-圖表辨識分析</td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
                         </td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-gray-50">
                         <td id="row-ai-name" class="px-4 py-2 text-left">AI辨識記食-名稱分析</td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
                         </td>
                         <td class="px-4 py-2">
-                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                        </td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-gray-50">
+                        <td id="row-weight" class="px-4 py-2 text-left">體重追蹤</td>
+                        <td class="px-4 py-2">
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
+                        </td>
+                        <td class="px-4 py-2">
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
+                        </td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-gray-50">
+                        <td id="row-notify" class="px-4 py-2 text-left">通知排程</td>
+                        <td class="px-4 py-2">
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-600 shadow">✕</span>
+                        </td>
+                        <td class="px-4 py-2">
+                            <span
+                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600 shadow">✓</span>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        </section>
+    </section>
 
     <!-- Q&A Section -->
     <section id="qanda" class="py-12 px-6 md:px-12 bg-white text-[#2D2926]">
         <h2 id="qa-title" class="text-2xl font-bold mb-10 text-center">常見問題</h2>
         <div id="qa-list" class="max-w-3xl mx-auto space-y-4">
             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button type="button" data-answer="qa-a1" class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
+                <button type="button" data-answer="qa-a1"
+                    class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
                     <span id="qa-q1" class="text-black text-base font-medium text-left">記食開始App需要付費嗎？</span>
                     <span class="ml-2">+</span>
                 </button>
@@ -338,7 +448,8 @@
                 </div>
             </div>
             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button type="button" data-answer="qa-a2" class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
+                <button type="button" data-answer="qa-a2"
+                    class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
                     <span id="qa-q2" class="text-black text-base font-medium text-left">Premium 版有哪些額外功能？</span>
                     <span class="ml-2">+</span>
                 </button>
@@ -347,7 +458,8 @@
                 </div>
             </div>
             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button type="button" data-answer="qa-a3" class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
+                <button type="button" data-answer="qa-a3"
+                    class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
                     <span id="qa-q3" class="text-black text-base font-medium text-left">離線時可以使用嗎？</span>
                     <span class="ml-2">+</span>
                 </button>
@@ -356,7 +468,8 @@
                 </div>
             </div>
             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button type="button" data-answer="qa-a4" class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
+                <button type="button" data-answer="qa-a4"
+                    class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
                     <span id="qa-q4" class="text-black text-base font-medium text-left">如何匯出我的記食資料？</span>
                     <span class="ml-2">+</span>
                 </button>
@@ -365,12 +478,33 @@
                 </div>
             </div>
             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button type="button" data-answer="qa-a5" class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
+                <button type="button" data-answer="qa-a5"
+                    class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
                     <span id="qa-q5" class="text-black text-base font-medium text-left">目前支援哪些語言？</span>
                     <span class="ml-2">+</span>
                 </button>
                 <div id="qa-a5" class="hidden py-4 px-4 text-gray-600 text-sm">
                     <p id="qa-a5-text">目前支援繁體中文、英文、韓文與日文。</p>
+                </div>
+            </div>
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+                <button type="button" data-answer="qa-a6"
+                    class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
+                    <span id="qa-q6" class="text-black text-base font-medium text-left">如何取消訂閱？</span>
+                    <span class="ml-2">+</span>
+                </button>
+                <div id="qa-a6" class="hidden py-4 px-4 text-gray-600 text-sm">
+                    <p id="qa-a6-text">請於訂閱期間結束前至少 24 小時，在您的 Apple ID 帳戶設定中取消自動續訂。</p>
+                </div>
+            </div>
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+                <button type="button" data-answer="qa-a7"
+                    class="w-full flex justify-between items-center py-4 px-4 focus:outline-none bg-gray-100">
+                    <span id="qa-q7" class="text-black text-base font-medium text-left">我的資料安全嗎？</span>
+                    <span class="ml-2">+</span>
+                </button>
+                <div id="qa-a7" class="hidden py-4 px-4 text-gray-600 text-sm">
+                    <p id="qa-a7-text">您的飲食紀錄皆儲存在您自己的裝置上，僅在使用 AI 辨識功能時會將照片傳送至 Google Gemini API 進行分析。</p>
                 </div>
             </div>
         </div>
@@ -380,12 +514,16 @@
     <footer class="bg-[#B8B0A6] text-[#2D2926] py-8 mt-12 rounded-t-xl px-6 md:px-12">
         <div class="flex flex-col md:flex-row md:justify-between items-center">
             <!-- 版權資訊 -->
-            <p id="footer-copyright" class="order-2 md:order-1 w-full md:w-auto text-center md:text-right">&copy; 2025 記食開始. 版權所有 | 用心設計，來自台灣</p>
+            <p id="footer-copyright" class="order-2 md:order-1 w-full md:w-auto text-center md:text-right">&copy; 2025
+                記食開始. 版權所有 | 用心設計，來自台灣</p>
             <!-- 支援連結 -->
             <div class="flex justify-center space-x-4 order-1 md:order-2 w-full md:w-auto mb-2 md:mb-0">
-                <a id="footer-support" href="supports/support.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">支援</a>
-                <a id="footer-terms" href="terms/terms.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">使用者條款</a>
-                <a id="footer-privacy" href="PrivacyPolicies/PrivacyPolicies.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">隱私政策</a>
+                <a id="footer-support" href="supports/support.html"
+                    class="text-[#2D2926] hover:text-white transition-colors duration-200">支援</a>
+                <a id="footer-terms" href="terms/terms.html"
+                    class="text-[#2D2926] hover:text-white transition-colors duration-200">使用者條款</a>
+                <a id="footer-privacy" href="PrivacyPolicies/PrivacyPolicies.html"
+                    class="text-[#2D2926] hover:text-white transition-colors duration-200">隱私政策</a>
             </div>
         </div>
     </footer>
@@ -403,7 +541,7 @@
                 } else {
                     mobileMenu.classList.add("-translate-y-4", "opacity-0");
                     mobileMenu.classList.remove("translate-y-0", "opacity-100");
-                    mobileMenu.addEventListener("transitionend", function handler(){
+                    mobileMenu.addEventListener("transitionend", function handler() {
                         mobileMenu.classList.add("hidden");
                         mobileMenu.removeEventListener("transitionend", handler);
                     }, { once: true });
@@ -413,7 +551,7 @@
                 link.addEventListener("click", () => {
                     mobileMenu.classList.add("-translate-y-4", "opacity-0");
                     mobileMenu.classList.remove("translate-y-0", "opacity-100");
-                    mobileMenu.addEventListener("transitionend", function handler(){
+                    mobileMenu.addEventListener("transitionend", function handler() {
                         mobileMenu.classList.add("hidden");
                         mobileMenu.removeEventListener("transitionend", handler);
                     }, { once: true });
@@ -723,9 +861,9 @@
 
         const langInfo = {
             'zh-TW': { flag: '🇹🇼', code: '中文', name: '繁體中文' },
-            'en':    { flag: '🇺🇸', code: 'EN', name: 'English' },
-            'ko':    { flag: '🇰🇷', code: 'KO', name: '한국어' },
-            'ja':    { flag: '🇯🇵', code: 'JA', name: '日本語' }
+            'en': { flag: '🇺🇸', code: 'EN', name: 'English' },
+            'ko': { flag: '🇰🇷', code: 'KO', name: '한국어' },
+            'ja': { flag: '🇯🇵', code: 'JA', name: '日本語' }
         };
 
         function initLangSwitcher(id) {
@@ -762,5 +900,7 @@
             });
         });
     </script>
+    <script src="carousel.js"></script>
 </body>
+
 </html>

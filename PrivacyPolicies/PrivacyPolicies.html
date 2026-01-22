@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,40 +11,65 @@
         /* Custom styles to match homepage theme */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #EEEEEE; /* 原本的背景色 */
-            color: #2D2926; /* 原本的文字顏色 */
+            background-color: #EEEEEE;
+            /* 原本的背景色 */
+            color: #2D2926;
+            /* 原本的文字顏色 */
             line-height: 1.6;
         }
+
         /* 定義主題顏色變數，方便 Tailwind 使用 */
-        .text-accent { color: #B8B0A6; }
-        .hover\:text-accent:hover { color: #B8B0A6; }
-        .text-primary-dark { color: #2D2926; }
-        .bg-accent { background-color: #B8B0A6; }
-        .text-highlight { color: #ECD676; } /* 標題強調色 */
+        .text-accent {
+            color: #B8B0A6;
+        }
+
+        .hover\:text-accent:hover {
+            color: #B8B0A6;
+        }
+
+        .text-primary-dark {
+            color: #2D2926;
+        }
+
+        .bg-accent {
+            background-color: #B8B0A6;
+        }
+
+        .text-highlight {
+            color: #ECD676;
+        }
+
+        /* 標題強調色 */
 
         /* 自定義樣式，確保列表項目縮排 */
         ul.policy-list li {
             list-style-type: disc;
-            margin-left: 1.5rem; /* 增加縮排 */
+            margin-left: 1.5rem;
+            /* 增加縮排 */
             margin-bottom: 0.75rem;
         }
+
         ol.policy-list li {
             list-style-type: decimal;
-            margin-left: 1.5rem; /* 增加縮排 */
+            margin-left: 1.5rem;
+            /* 增加縮排 */
             margin-bottom: 0.75rem;
         }
     </style>
 </head>
+
 <body class="antialiased pt-20">
     <!-- Header Section - Matching Homepage Style -->
-        <header class="fixed top-0 left-0 right-0 z-10 bg-white/95 shadow-sm py-4 px-6 md:px-12 flex items-center rounded-b-xl">
-         <a href="../index.html" class="flex items-center space-x-2">
+    <header
+        class="fixed top-0 left-0 right-0 z-10 bg-white/95 shadow-sm py-4 px-6 md:px-12 flex items-center rounded-b-xl">
+        <a href="../index.html" class="flex items-center space-x-2">
             <img src="../assets/start_tracking_meals_with_white_bg.png" alt="Logo" class="w-8 h-8 object-contain" />
             <div class="text-2xl font-bold text-[#2D2926]">記食開始</div>
         </a>
         <!-- Navigation - Only "首頁" link -->
-         <nav class="hidden md:flex space-x-8 ml-auto items-center">
-            <a href="../index.html" class="text-primary-dark hover:text-accent font-medium transition-colors duration-200">首頁</a>
+        <nav class="hidden md:flex space-x-8 ml-auto items-center">
+            <a href="../index.html"
+                class="text-primary-dark hover:text-accent font-medium transition-colors duration-200">首頁</a>
         </nav>
         <div id="lang-switcher" class="relative ml-4 mr-2">
             <button class="lang-toggle flex items-center text-sm bg-transparent focus:outline-none">
@@ -52,23 +78,33 @@
                 <span class="ml-1">▼</span>
             </button>
             <ul class="lang-menu hidden absolute right-0 mt-1 bg-white border border-gray-200 rounded text-sm w-40">
-                <li data-lang="zh-TW" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇹🇼</span>繁體中文</li>
-                <li data-lang="en" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇺🇸</span>English</li>
-                <li data-lang="ko" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇰🇷</span>한국어</li>
-                <li data-lang="ja" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span class="mr-2">🇯🇵</span>日本語</li>
+                <li data-lang="zh-TW" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span
+                        class="mr-2">🇹🇼</span>繁體中文</li>
+                <li data-lang="en" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span
+                        class="mr-2">🇺🇸</span>English</li>
+                <li data-lang="ko" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span
+                        class="mr-2">🇰🇷</span>한국어</li>
+                <li data-lang="ja" class="px-2 py-1 cursor-pointer flex items-center hover:bg-gray-100"><span
+                        class="mr-2">🇯🇵</span>日本語</li>
             </ul>
         </div>
         <div id="google_translate_element" class="hidden"></div>
         <!-- Mobile menu button (hidden on desktop) -->
         <button id="mobile-menu-button" class="md:hidden text-primary-dark hover:text-accent focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
         </button>
     </header>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden bg-white/95 shadow-md px-6 pb-4 fixed top-[4.5rem] left-0 right-0 z-20 transition-transform transition-opacity duration-300 transform -translate-y-4 opacity-0">
+    <div id="mobile-menu"
+        class="md:hidden hidden bg-white/95 shadow-md px-6 pb-4 fixed top-[4.5rem] left-0 right-0 z-20 transition-transform transition-opacity duration-300 transform -translate-y-4 opacity-0">
         <nav class="flex flex-col divide-y divide-gray-200">
-            <a href="../index.html" class="text-xl py-3 text-primary-dark hover:text-accent font-medium transition-colors duration-200">首頁</a>
+            <a href="../index.html"
+                class="text-xl py-3 text-primary-dark hover:text-accent font-medium transition-colors duration-200">首頁</a>
         </nav>
         <div id="google_translate_element_mobile" class="hidden"></div>
     </div>
@@ -76,8 +112,9 @@
     <!-- Main Content Container - Styled like a card -->
     <div class="max-w-4xl mx-auto p-6 md:p-10 bg-white rounded-xl shadow-lg mt-8 mb-12">
         <!-- Main Title -->
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 text-center text-primary-dark">隱私權政策</h1>
-        <p class="text-sm text-right mb-4">最近更新日期：2025.7.28</p>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 text-center text-primary-dark">
+            隱私權政策</h1>
+        <p class="text-sm text-right mb-4">最近更新日期：2026.1.22</p>
 
         <!-- Section 1 -->
         <div class="pb-6 border-b-2 border-gray-200 mb-6">
@@ -94,10 +131,14 @@
             <h2 class="text-2xl font-bold mb-4 text-primary-dark">一、資料的收集與使用</h2>
             <ol class="policy-list">
                 <li><strong>本地資料</strong>：您於本 App 中輸入的餐點、喝水、體重及運動等紀錄皆儲存在您自己的裝置上。我們不會將這些個人資料上傳至任何伺服器。</li>
-                <li><strong>相機與照片</strong>：若您啟用拍照或條碼掃描功能，本 App 需要取得相機權限。所拍攝的影像僅用於辨識食物或營養標示，不會儲存或傳送至除 Google Gemini API 之外的第三方服務。</li>
-                <li><strong>Google Gemini API</strong>：為提供食物與營養資訊分析，本 App 會在您選擇使用相關功能時，將照片或查詢內容傳送至 Google Gemini API。<u>傳送之資料僅包含當次分析所需的圖片內容，不包含任何個人識別資訊</u>，並依 Google 之隱私政策處理。依我們所知，Google 並不會使用該資料訓練模型或進行個人化分析。我們亦不會儲存或另行利用此等資料。</li>
+                <li><strong>相機與照片</strong>：若您啟用拍照或條碼掃描功能，本 App 需要取得相機權限。所拍攝的影像僅用於辨識食物或營養標示，不會儲存或傳送至除 Google Gemini API
+                    之外的第三方服務。</li>
+                <li><strong>Google Gemini API</strong>：為提供食物與營養資訊分析，本 App 會在您選擇使用相關功能時，將照片或查詢內容傳送至 Google Gemini
+                    API。<u>傳送之資料僅包含當次分析所需的圖片內容，不包含任何個人識別資訊</u>，並依 Google 之隱私政策處理。依我們所知，Google
+                    並不會使用該資料訓練模型或進行個人化分析。我們亦不會儲存或另行利用此等資料。</li>
                 <li><strong>使用統計</strong>：本 App 目前未內建任何行為追蹤或分析工具，也不會向我們或第三方回傳使用紀錄。</li>
-                <li><strong>應用內購買</strong>：若您透過 App Store 購買付費功能，交易與付款流程均由 Apple 處理。我們僅獲得購買狀態以啟用相應功能，不會收到您的付款資訊。若您訂閱月付或年付方案，可於 Apple ID 帳戶設定中取消續訂。</li>
+                <li><strong>應用內購買</strong>：若您透過 App Store 購買付費功能，交易與付款流程均由 Apple
+                    處理。我們僅獲得購買狀態以啟用相應功能，不會收到您的付款資訊。若您訂閱月付或年付方案，可於 Apple ID 帳戶設定中取消續訂。</li>
             </ol>
         </div>
 
@@ -138,25 +179,30 @@
         <div class="pb-6">
             <h2 class="text-2xl font-bold mb-4 text-primary-dark">五、聯絡我們</h2>
             <p class="text-base mb-3">
-                若您對本政策有任何疑問，請透過 <a href="https://github.com/ChiuGaStudio/Start-Tracking-Meals/issues" target="_blank" class="text-accent hover:underline">GitHub 專案頁面</a> 提出 issue，或寄信至 <a href="mailto:chiugastudio@gmail.com" class="text-accent hover:underline">chiugastudio@gmail.com</a> 與我們聯繫。
+                若您對本政策有任何疑問，請寄信至 <a href="mailto:chiugastudio@gmail.com"
+                    class="text-accent hover:underline">chiugastudio@gmail.com</a> 與我們聯繫。
             </p>
         </div>
 
     </div>
 
-     <!-- Footer Section -->
+    <!-- Footer Section -->
     <footer class="bg-[#B8B0A6] text-[#2D2926] py-8 mt-12 rounded-t-xl px-6 md:px-12">
         <div class="flex flex-col md:flex-row md:justify-between items-center">
             <!-- 版權資訊 -->
-            <p class="order-2 md:order-1 w-full md:w-auto text-center md:text-right">&copy; 2025 記食開始. All rights reserved.</p>
+            <p class="order-2 md:order-1 w-full md:w-auto text-center md:text-right">&copy; 2025 記食開始. All rights
+                reserved.</p>
             <!-- 支援連結 -->
             <div class="flex justify-center space-x-4 order-1 md:order-2 w-full md:w-auto mb-2 md:mb-0">
-                <a href="../supports/support.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">支援</a>
-                <a href="../terms/terms.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">使用者條款</a>
-                <a href="PrivacyPolicies.html" class="text-[#2D2926] hover:text-white transition-colors duration-200">隱私政策</a>
+                <a href="../supports/support.html"
+                    class="text-[#2D2926] hover:text-white transition-colors duration-200">支援</a>
+                <a href="../terms/terms.html"
+                    class="text-[#2D2926] hover:text-white transition-colors duration-200">使用者條款</a>
+                <a href="PrivacyPolicies.html"
+                    class="text-[#2D2926] hover:text-white transition-colors duration-200">隱私政策</a>
             </div>
         </div>
-   </footer>
+    </footer>
     <script>
         const menuBtn = document.getElementById("mobile-menu-button");
         const mobileMenu = document.getElementById("mobile-menu");
@@ -171,7 +217,7 @@
                 } else {
                     mobileMenu.classList.add("-translate-y-4", "opacity-0");
                     mobileMenu.classList.remove("translate-y-0", "opacity-100");
-                    mobileMenu.addEventListener("transitionend", function handler(){
+                    mobileMenu.addEventListener("transitionend", function handler() {
                         mobileMenu.classList.add("hidden");
                         mobileMenu.removeEventListener("transitionend", handler);
                     }, { once: true });
@@ -206,9 +252,9 @@
 
         const langInfo = {
             'zh-TW': { flag: '🇹🇼', code: '中文' },
-            'en':    { flag: '🇺🇸', code: 'EN' },
-            'ko':    { flag: '🇰🇷', code: 'KO' },
-            'ja':    { flag: '🇯🇵', code: 'JA' }
+            'en': { flag: '🇺🇸', code: 'EN' },
+            'ko': { flag: '🇰🇷', code: 'KO' },
+            'ja': { flag: '🇯🇵', code: 'JA' }
         };
 
         function initLangSwitcher(id) {
@@ -248,4 +294,5 @@
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
+
 </html>
